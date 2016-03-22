@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        link(rel="dns-prefetch", href="http://img01.oneniceapp.com")
+        link(rel="dns-prefetch", href="http://img02.oneniceapp.com")
+        link(rel="dns-prefetch", href="http://img03.oneniceapp.com")
+        link(rel="dns-prefetch", href="http://img04.oneniceapp.com")
+        block css
+            link(rel="stylesheet", href="/static/css/core/main.css")
+            block css_append
+
+        script(type='text/javascript', src="/static/js/core/rem.js")
+
+        title
+            block title
+                | nice
+
+    body
+        block body
+            | hybrid
+
+        block js
+            script(type='text/javascript', src="/static/js/lib/requirejs/require.js")
+            script(type='text/javascript', src="/static/js/core/require_config.js")
+            block js_append  

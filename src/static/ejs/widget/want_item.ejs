@@ -1,0 +1,29 @@
+<section class="product-list want-wrapper">
+    <div class="header clearfix">
+        <a class="user">
+            <img class="lazyload" src="/static/images/holder.png" data-src="<%= data.avatar %>"/>
+            <%if (data.verified_reason) {%>
+                <s class="verified ilbk"></s>
+            <%}%>
+            <span class="ilbk line-clamp"><%= data.uname%></span>
+        </a>
+    </div>
+    <a class="item" href="/product/detail?pid=<%= data.pid%>&hiddennavbar=yes">
+        <img class="lazyload" src="/static/images/holder.png" data-src="<%= data.pic_cover%>-sectrade.r320"/>
+    </a>
+    <%if (data.today_update) {%>
+        <div class="today"></div>
+    <%}%>
+    <h1 class="name">
+        <div class="title line-clamp"><%= data.title%></div>
+        <%if (data.status == 3) {%>
+            <span class="money soldout">已售出</span>
+        <%} else {%>
+            <div>
+                <span class="money">￥<%= data.price%></span>
+                <span class="reference_price ilbk">参考价￥<%= data.reference_price%></span>
+            </div>
+        <%}%>
+    </h1>
+    
+</section>

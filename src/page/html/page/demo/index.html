@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="dns-prefetch" href="http://img01.oneniceapp.com">
+    <link rel="dns-prefetch" href="http://img02.oneniceapp.com">
+    <link rel="dns-prefetch" href="http://img03.oneniceapp.com">
+    <link rel="dns-prefetch" href="http://img04.oneniceapp.com">
+    <link rel="stylesheet" href="/static/css/core/main.css">
+    <link rel="stylesheet" href="/static/css/page/demo/index.css">
+    <script type="text/javascript" src="/static/js/core/rem.js"></script>
+    <title>测试页面</title>
+  </head>
+  <body>
+    <div class="test-area">测试</div>
+    <div id="nice-container" class="main-container"></div>
+    <script type="text/javascript" src="/static/js/lib/requirejs/require.js"></script>
+    <script type="text/javascript" src="/static/js/core/require_config.js"></script>
+    <script>
+      require(['page/demo/index'], function(app) {
+          app();
+      });
+    </script>
+  </body>
+</html>

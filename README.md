@@ -1,2 +1,1 @@
-# rodickmini.github.io
-my blog
+# my blog 
