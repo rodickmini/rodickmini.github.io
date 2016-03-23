@@ -2,10 +2,10 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid $binding-color;
+    border-bottom: 5px solid $binding-color;
     min-height: 56px;
-    background-color: #ffd600;
+    background-color: $brand-color;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -22,7 +22,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: #000;
     }
     &:hover {
         text-decoration: none;
@@ -51,8 +51,8 @@
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        background-color: $binding-color;
+        border: 1px solid $binding-color;
         border-radius: 5px;
         text-align: right;
 
