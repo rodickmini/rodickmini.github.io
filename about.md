@@ -1,15 +1,13 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am a frontend engineer of 4 years of experience. I am skilled of **HTML**, **CSS** and **JAVASCRIPT**.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I am a master graduated from SCS of **BUPT**. 
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+In part time, I like to listen rock music and play guitar, and I used to be the lead singer of a metalcore band for 4 years. But at the end of the day, I am really a **BLUESHEAD**, I love blues songs, classic rock and hard rock. I think the root of modern rock is the old 12 bar blues \m/
+
+>MAKE EVERYDAY COUNT

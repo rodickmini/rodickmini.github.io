@@ -5,6 +5,7 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background-color: #ffd600;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,10 +18,14 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    text-decoration: none;
 
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+    &:hover {
+        text-decoration: none;
     }
 }
 
