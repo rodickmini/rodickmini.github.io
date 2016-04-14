@@ -17,7 +17,7 @@ layout: page
       <span class="postTag">{{post.tag}}</span>
     </div>
   <div class="postExt">
-    {{post.excerpt}}
+    {{ post.content | strip_html | truncatewords:20}}
   </div>
 </div>
 {% endif %}
