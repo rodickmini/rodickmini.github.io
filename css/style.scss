@@ -246,6 +246,7 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
+
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -293,7 +294,8 @@ pre {
   font-family: "Source Sans Pro";
   font-size: 18px;
   font-weight: 300;
-  padding-top: 0;
+  padding-top: 3.5em;
+
 }
 .download {
   padding: 10px;
@@ -332,10 +334,9 @@ pre {
   letter-spacing: 2px;
 }
 .postContent {
-  padding-top: 3.5em;
+  
 }
 .postDate {
-  float: left;
   text-transform: uppercase;
   font-family: "Source Sans Pro";
   font-size: 16px;
@@ -343,12 +344,16 @@ pre {
   letter-spacing: 2px;
 }
 .postTag {
-  float: right;
+  font-size: .8rem;
+  color: $grey-color
 }
 .postTitle {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+.postExt {
+  font-size: 14px;
 }
 /**
  * Site header
@@ -404,7 +409,7 @@ pre {
 }
 .page-tagline {
   font-size: 12px;
-  font-family: "PT Sans";
+  font-family: "Josefin Sans";
   color: rgb(170, 170, 170);
   text-align: center;
   text-transform: lowercase;
@@ -501,33 +506,26 @@ pre {
   padding-left: $spacing-unit / 2;
 }
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width: calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(33.333% - (#{$spacing-unit} / 2));
+  width: calc(33.333% - (#{$spacing-unit} / 2));
 }
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width: calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(33.333% - (#{$spacing-unit} / 2));
+  width: calc(33.333% - (#{$spacing-unit} / 2));
+  text-align: center;
 }
 .footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width: calc(45% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(33.333% - (#{$spacing-unit} / 2));
+  width: calc(33.333% - (#{$spacing-unit} / 2));
+  text-align: right;
 }
-@include media-query($on-laptop) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width: calc(50% - (#{$spacing-unit} / 2));
-  }
-  .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width: calc(100% - (#{$spacing-unit} / 2));
-  }
-}
+
 @include media-query($on-palm) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width: calc(100% - (#{$spacing-unit} / 2));
+    text-align: center;
   }
 }
 /**
@@ -563,7 +561,7 @@ pre {
   margin-bottom: $spacing-unit;
 }
 .post-title {
-  font-size: 62px;
+  font-size: 30px;
 
   font-family: "PT Sans";
   font-weight: 900;
@@ -575,7 +573,7 @@ pre {
   margin-bottom: $spacing-unit;
   padding-bottom: 3em !important;
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   h2 {
     font-size: 32px;
