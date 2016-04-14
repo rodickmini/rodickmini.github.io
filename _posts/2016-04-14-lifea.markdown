@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "生活啊"
+date:   2016-04-14
+categories: life
+author: "Rodick Tsai"
+---
+
+一团乱麻

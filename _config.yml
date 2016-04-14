@@ -16,3 +16,4 @@ github_username:  rodickmini
 
 # Build settings
 markdown: kramdown
+encoding: utf-8

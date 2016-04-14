@@ -337,7 +337,6 @@ pre {
 }
 .postContent {
   padding-top: 3.5em;
-  text-align: center;
 }
 .postDate {
   float: left;
@@ -353,7 +352,6 @@ pre {
 }
 .postTitle {
   font-weight: 400;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-indent: 3px;
@@ -389,6 +387,9 @@ pre {
 .exclamationMark {
   padding-left: 2em;
   padding-right: 2em;
+  &:last-child {
+    display: none;
+  }
 }
 .site-navigation {
   color: #aaa;
@@ -399,20 +400,22 @@ pre {
   font-family: 'Josefin Sans';
   font-weight: 300;
   padding-top: 5em;
+  text-align: center;
 }
 .page-title {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-indent: 2px;
   font-family: "PT Sans";
-  font-size: 12px;
+  font-size: 18px;
 }
 .page-tagline {
-  font-size: 18px;
+  font-size: 12px;
   font-family: "PT Sans";
   color: rgb(170, 170, 170);
   text-align: center;
   text-transform: lowercase;
+  font-style: italic;
 }
 .page-link {
   color: rgb(170, 170, 170);
@@ -568,7 +571,6 @@ pre {
 .post-title {
   font-size: 62px;
 
-  text-align: center;
   font-family: "PT Sans";
   font-weight: 900;
   @include media-query($on-laptop) {
