@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Comfortably numb"
-date:   2016-04-14
 categories: music
-author: "Rodick Tsai"
 ---
 
 Hello.

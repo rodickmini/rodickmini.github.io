@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Wish you were here"
-date:   2016-04-14
 categories: music
-author: "Rodick Tsai"
 ---
 
 So
