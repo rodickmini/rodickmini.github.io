@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "生活啊"
+title:  生活啊
 categories: life
 tag: 感悟
 ---

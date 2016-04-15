@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wish you were here"
+title:  Wish you were here
 categories: music
 ---
 

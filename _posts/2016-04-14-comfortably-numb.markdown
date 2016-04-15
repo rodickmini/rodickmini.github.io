@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Comfortably numb"
+title:  Comfortably numb
 categories: music
 ---
 
