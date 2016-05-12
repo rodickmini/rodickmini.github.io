@@ -2,6 +2,6 @@
 layout: archive
 title: Frontend
 permalink: /frontend/
-tagline: "talk is cheap, show me the code."
+tagline: "combination of art and technology"
 category: "frontend"
 ---
