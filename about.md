@@ -2,6 +2,7 @@
 layout: page
 title : About
 permalink: /about/
+tagline: "can not tell you more"
 ---
 <div style="padding-top: 3.5em;"></div>
 
