@@ -19,9 +19,26 @@
   <div id="map-container"></div>
   <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=46a010c78cf928b16d1956b2f89640e9"></script>
   <script>
-    var map = new AMap.Map('map-container', {
-      zoom: 10
-    });
+    var map;
+    var initAmap = function(lat, lon) {
+      console.log(">>>init amap");
+      console.log('lat ' + lat);
+      console.log('long ' + lon);
+      map = new AMap.Map('map-container', {
+        zoom: 10,
+        center: [lat, lon]
+      });
+    }
+
+    if ("geolocation" in navigator) {
+      /* 地理位置服务可用 */
+      navigator.geolocation.getCurrentPosition(function(position) {
+        initAmap(position.coords.latitude, position.coords.longitude);
+      });
+    } else {
+      alert('地理位置服务不可用');
+    }
+    
   </script>
 </body>
 </html>
