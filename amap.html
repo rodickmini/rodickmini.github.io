@@ -1,68 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rodickcai AMap test</title>
-  <style>
-    #map-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    #tip {
-      background-color: #fff;
-      padding-left: 10px;
-      padding-right: 10px;
-      position: absolute;
-      font-size: 12px;
-      right: 10px;
-      top: 20px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-      line-height: 30px;
-  }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
   </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
+  <title>浏览器定位</title>
 </head>
 <body>
-  <div id="map-container"></div>
-  <div id="tip"></div>
-  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=46a010c78cf928b16d1956b2f89640e9"></script>
-  <script type="text/javascript">
-    var map, geolocation;
-    //加载地图，调用浏览器定位服务
-    map = new AMap.Map('map-container', {
-        resizeEnable: true
-    });
-    map.plugin('AMap.Geolocation', function() {
-      geolocation = new AMap.Geolocation({
-        enableHighAccuracy: true,//是否使用高精度定位，默认:true
-        timeout: 10000,          //超过10秒后停止定位，默认：无穷大
-        buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-        zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
-        buttonPosition:'RB'
-      });
-      map.addControl(geolocation);
-      geolocation.getCurrentPosition();
-      AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
-      AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
-    });
-    //解析定位结果
-    function onComplete(data) {
-        var str=['定位成功'];
-        str.push('经度：' + data.position.getLng());
-        str.push('纬度：' + data.position.getLat());
-        str.push('精度：' + data.accuracy + ' 米');
-        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
-        document.getElementById('tip').innerHTML = str.join('<br>');
-    }
-    //解析定位错误信息
-    function onError(data) {
-        document.getElementById('tip').innerHTML = '定位失败';
-    }
-  </script>
+  <div id="allmap"></div>
 </body>
 </html>
+<script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map("allmap");
+  var point = new BMap.Point(116.331398,39.897445);
+  map.centerAndZoom(point,12);
+
+  var geolocation = new BMap.Geolocation();
+  geolocation.getCurrentPosition(function(r){
+    if(this.getStatus() == BMAP_STATUS_SUCCESS){
+      var mk = new BMap.Marker(r.point);
+      map.addOverlay(mk);
+      map.panTo(r.point);
+      alert('您的位置：'+r.point.lng+','+r.point.lat);
+    }
+    else {
+      alert('failed'+this.getStatus());
+    }        
+  },{enableHighAccuracy: true})
+  //关于状态码
+  //BMAP_STATUS_SUCCESS 检索成功。对应数值“0”。
+  //BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。
+  //BMAP_STATUS_UNKNOWN_LOCATION  位置结果未知。对应数值“2”。
+  //BMAP_STATUS_UNKNOWN_ROUTE 导航结果未知。对应数值“3”。
+  //BMAP_STATUS_INVALID_KEY 非法密钥。对应数值“4”。
+  //BMAP_STATUS_INVALID_REQUEST 非法请求。对应数值“5”。
+  //BMAP_STATUS_PERMISSION_DENIED 没有权限。对应数值“6”。(自 1.1 新增)
+  //BMAP_STATUS_SERVICE_UNAVAILABLE 服务不可用。对应数值“7”。(自 1.1 新增)
+  //BMAP_STATUS_TIMEOUT 超时。对应数值“8”。(自 1.1 新增)
+</script>
