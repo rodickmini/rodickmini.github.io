@@ -18,7 +18,7 @@ tag: 工程
 
 ### 用法
 
-在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，因此请注意选择HTTPS的地址）
+在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，请注意选择HTTPS的地址）
 
 ![](http://blog.rodickcai.com/assets/images/posts/git/clone.png)
 
