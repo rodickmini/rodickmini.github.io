@@ -4,8 +4,6 @@ title: Git最常用的n个操作
 categories: frontend
 tag: 工程
 ---
-
-# Git最常用的n个操作
 ![git_draft](http://blog.rodickcai.com/assets/images/posts/git/git_draft.png)
 
 上面这张图是我最开始学Git，按照自己的理解画出来的，可能会有问题，但总体问题不大。
