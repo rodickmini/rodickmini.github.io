@@ -1,9 +1,4 @@
----
-layout: post
-title: Git最常用的n个操作
-categories: frontend
-tag: 工程
----
+# Git最常用的n个操作
 ![git_draft](http://blog.rodickcai.com/assets/images/posts/git/git_draft.png)
 
 上面这张图是我最开始学Git，按照自己的理解画出来的，可能会有问题，但总体问题不大。
@@ -18,7 +13,7 @@ tag: 工程
 
 ### 用法
 
-在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，请注意选择HTTPS的地址）
+在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，因此请注意选择HTTPS的地址）
 
 ![](http://blog.rodickcai.com/assets/images/posts/git/clone.png)
 
@@ -31,7 +26,6 @@ tag: 工程
 `git clone https://github.com/rodickmini/taptempo.git taptempo2`
 
 ## git checkout
-
 ### 作用
 
 > 切换分支或将修改的文件恢复
@@ -80,7 +74,7 @@ tag: 工程
 
 `git reset HEAD index.html`
 
-如果我们想把一个文件恢复成修改前的状态（回头看一下刚才讲的`git checkout`的作用除了切换分支还能恢复文件，就是这意思），可以使用以下命令，就撤销了我们所有的修改：
+如果我们想把一个文件恢复成修改前的状态，可以使用以下命令，就撤销了我们所有的修改：
 
 `git checkout index.html`
 
@@ -162,18 +156,86 @@ commit message在某些系统里面可以被转化成email，所以格式类似�
 
 `git push origin feature-test`
 
-如果远程仓库当前没有`feature-test`这个分支，将会新建分支
+如果不push，协作的小伙伴们将永远不知道你关起门来做了什么伤天害理的事儿，所以，当我们做完功能后，要记得使用`git push`将自己的改动推送到远程代码仓库。
+
+如果远程仓库当前没有`feature-test`这个分支，将会新建分支。
 
 ## git fetch
+
 ### 作用
-### 用法
-## git merge
-### 作用
-### 用法
-## git pull
-### 作用
-### 用法
-## git log
-### 作用
+
+> 将远程代码仓库的代码下载到本地
+
 ### 用法
 
+本地仓库维护这一堆“remote-tracking branches”，翻译过来叫“远程跟踪分支”，对应着本地仓库里`remote/master` `remote/develop`这些分支。
+
+fetch操作后，远程跟踪分支就和远程代码仓库里的相应分支代码保持一致了~
+
+`git fetch`
+
+`fetch`操作默认只会fetch`origin`仓库的分支，如果要fetch其它仓库的分支，需要在后面加上仓库名：
+
+`git fetch repo-caiyou`
+
+通常，我们的feature分支在完成使命后会被管理员删除掉，而我们各自的本地却不知道，硬盘空间吃紧。所以，如果我们想在管理员删除了远端的某些分支的时候，将自己本地对应的“远程跟踪分支”删除掉，需要在fetch操作时加一个`-p`参数：
+
+`git fetch -p`
+
+## git merge
+
+### 作用
+
+> 将一个或多个分支合并
+
+### 用法
+
+比如我们当前在`develop`分支上，`git fetch`之后，我们把远程代码仓库中的`develop`分支下载到了本地仓库，但是并没有`merge`到我们当前工作的`develop`分支里，看`log`的话，我们会发现我们本地的`develop`分支和`remote/develop`分支还差了老远~因此需要进行如下操作：
+
+`git merge origin/develop`
+
+这样，`develop`分支就和`remote/develop`分支一样了。
+
+`git merge`操作通常还用在别的一些场景中，比如，我们的同事在`feature-x`分支上做好了某个业务，此时，需要将`feature-x`分支合并到`develop`分支，便于在测试环境上线，就需要先切换到`develop`分支：
+
+`git checkout develop`
+
+再将`feature-x`分支merge到`develop`分支：
+
+`git merge feature-x`
+
+当然，如果是比较大的变更，或是涉及到比较重要的文件时，这类业务上的merge操作建议在github上使用`pull-request`，或是gitlab系统里的`merge-request`，贸然merge产生大量冲突会很蛋疼的哦~
+
+## git pull
+
+### 作用
+
+> 将远程代码仓库里的代码下载下来并自动合并到当前工作的分支
+
+### 用法
+
+`git pull`
+
+不负责任地讲，`git pull`基本上等于`git fetch` + `git merge FETCH_HEAD`，但是，`git pull`操作无法看清中间的代码差异和合并的逻辑（其实是我不太清楚啊。。。），曾经踩过坑，代码合并出问题，所以我个人不会直接使用`git pull`这个操作，毕竟，耿直boy们更喜欢手动挡嘛~
+
+## git log
+
+### 作用
+
+> 查看代码提交日志
+
+### 用法
+
+`git log`
+
+会显示最基本的log信息，但是不直观，不能看清分支之间的分叉、合并、前因后果，所以个人习惯加上`--all``--decorate``--graph`这3个参数：
+
+`git log --all --decorate --graph`
+
+出来的log是这样色儿的：
+
+![git_log](http://blog.rodickcai.com/assets/images/posts/git/git_log.png)
+
+`git log`平时是和`git status`一样最常用的命令，毕竟强迫症，需要不断通过这两个命令找到安全感。。。
+
+**THE END**
