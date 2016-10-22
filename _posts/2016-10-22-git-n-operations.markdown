@@ -241,7 +241,7 @@ fetch操作后，远程跟踪分支就和远程代码仓库里的相应分支代
 
 出来的log是这样色儿的：
 
-![git_log](http://blog.rodickcai.com/assets/images/posts/git/git_log.png)
+![git_log](http://blog.rodickcai.com/assets/images/posts/git/git_log.jpg)
 
 `git log`平时是和`git status`一样最常用的命令，毕竟强迫症，需要不断通过这两个命令找到安全感。。。
 
