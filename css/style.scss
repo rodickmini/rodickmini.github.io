@@ -18,8 +18,8 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color:       #969696;
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
@@ -122,6 +122,7 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
+    font-size: 1rem;
 }
 
 li {
@@ -198,7 +199,7 @@ blockquote {
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     font-style: italic;
 
     > :last-child {
@@ -217,10 +218,14 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    word-wrap: break-word;
+    table-layout: fixed;
+    word-break: break-all;
 }
 
 code {
     padding: 1px 5px;
+    margin: 0 2px;
 }
 
 pre {
@@ -578,6 +583,7 @@ pre {
   padding-bottom: 3em !important;
   p {
     font-size: 1rem;
+    text-align: justify;
   }
   h2 {
     font-size: 32px;
