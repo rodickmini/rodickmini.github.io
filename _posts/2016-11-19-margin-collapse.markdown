@@ -24,7 +24,7 @@ tag: CSS
 </body>
 ```
 
-我们期待`section-a`和`section-b`直接间隔60px，但发现只隔了40px，上面元素的`margin-bottom`和下面元素的`margin-top`重叠在了一起。。。
+我们期待`section-a`和`section-b`直接间隔70px，但发现只隔了40px，上面元素的`margin-bottom`和下面元素的`margin-top`重叠在了一起。。。
 
 ## 2、父元素的margin-top和其普通流中的第一个子元素的margin-top
 
