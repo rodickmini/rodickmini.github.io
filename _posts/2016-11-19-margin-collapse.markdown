@@ -76,7 +76,7 @@ tag: CSS
 
 ```html
 <style>
-  //加了overflow:hidden之后，.section-a 和 .section-b 都成了BFC
+  /*加了overflow:hidden之后，.section-a 和 .section-b 都成了BFC*/
   .section-a {height: 30px; background-color: black; margin-bottom: 30px; overflow: hidden;}
   .section-b {height: 30px; background-color: grey; margin-top: 40px; overflow:hidden;}
 </style>
