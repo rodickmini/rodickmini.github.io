@@ -90,9 +90,9 @@ tag: CSS
 
 > 属于同一个BFC的两个相邻Box，垂直方向上的margin会发生重叠
 
-做了上面设置的`.section-a`和`.section-b`分别都成了BFC，但它们本身都属于同一个BFC，这个BFC的名字叫`body`！
+做了上面设置的`.section-a`和`.section-b`分别都成了BFC，但它们本身都属于同一个BFC，这个BFC的名字叫`html`！
 
-而如果把`.section-a`外面用一个BFC包裹（假设是`<div class="wrapper"></div>`），那么`.section-a`这个Box属于`.wrapper`这个BFC，而`.section-b`这个Box属于`body`这个BFC，他们的外边距当然就不会重叠了！而这个做法正是情况2和情况3的解决方案~只不过这个做法是情况2和3中“父元素margin为0”的特殊情况。
+而如果把`.section-a`外面用一个BFC包裹（假设是`<div class="wrapper"></div>`），那么`.section-a`这个Box属于`.wrapper`这个BFC，而`.section-b`这个Box属于`html`这个BFC，他们的外边距当然就不会重叠了！而这个做法正是情况2和情况3的解决方案~只不过这个做法是情况2和3中“父元素margin为0”的特殊情况。
 
 ### 情况2&情况3
 
