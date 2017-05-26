@@ -1,10 +1,10 @@
 ---
 layout: post
-title: cookie localStorage sessionStorage对比
+title: 标准模式（standards mode）和怪异模式(quirks mode)
 categories: frontend
 ---
 
-# 什么是浏览器的标准模式（standards mode）和怪异(quirks mode)模式
+# 什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)
 
 > 在web发展的早期，W3C标准尚未出台，不同浏览器对html的解析标准不一致，网页开发者为了能让自己的网页在这些上古浏览器上得到正常的渲染，都遵循它们私有的标准进行不同的开发。
 > 
