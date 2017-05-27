@@ -90,6 +90,23 @@ tag: CSS
 </body>
 ```
 
-**注：本文是笔者学习了`张鑫旭`博客之后自己总（chao）结(xi)的，如侵删！**
+## 5.左侧左浮动，右侧右浮动，中间元素触发[BFC](/frontend/2016/11/21/bfc.html)
+
+> 中间元素设置 `overflow: hidden` 触发[BFC](/frontend/2016/11/21/bfc.html)，但是溢出元素将不可见
+
+```html
+<style>
+  html, body {margin: 0; padding: 0; height: 100%;}
+  .col {width: 200px; height: 100%;}
+  .left.col {float: left; background-color: #03A9F4; margin-right: 10px;}
+  .right.col {float: right; background-color: #F44336; margin-left: 10px;}
+  .mid {height: 100%; background-color: #eee; overflow: hidden;}
+</style>
+<body>
+  <div class="right col"></div>
+  <div class="left col"></div>
+  <div class="mid"></div>
+</body>
+```
 
 **END**
