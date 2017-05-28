@@ -27,6 +27,10 @@ typeof true === 'boolean';
 typeof false === 'boolean';
 typeof Boolean(true) === 'boolean'; // 但不要使用这种形式!
 
+// Functions
+typeof eval === 'function';
+typeof Math.floor === 'function';
+
 // Symbols
 typeof Symbol() === 'symbol';
 typeof Symbol('foo') === 'symbol';
