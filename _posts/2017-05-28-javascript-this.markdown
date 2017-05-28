@@ -131,7 +131,7 @@ printThis.call([1])
 printThis.call([2])
 
 ```
-根据第一种情形，上述代码两次调用均输出 `window`，如果把print函数定义为箭头函数，则print函数内部的 `this` 值会在定义 `print` 函数时决定，示例如下：
+根据第一种情形，上述代码两次调用均输出 `window`，如果把 `print` 函数定义为箭头函数，则 `print` 函数内部的 `this` 值会在定义 `print` 函数时决定，示例如下：
 
 ```javascript
 function printThis() {
@@ -147,7 +147,7 @@ printThis.call([1]) // [1]
 
 上例中， `printThis.call([1])` 调用 `printThis` 函数时将其内部的 `this` 值设为 `[1]`。
 
-在 `printThis` 函数内部定义了一个箭头函数 `print`，箭头函数中的this，就是其外层函数 `printThis` 的 `this`，也就是 `[1]`。
+在 `printThis` 函数内部定义了一个箭头函数 `print`，箭头函数中的 `this`，就是其外层函数 `printThis` 的 `this`，也就是 `[1]`。
 
 随后， `print()` 语句执行刚刚定义的函数，因此输出 `[1]`。
 
