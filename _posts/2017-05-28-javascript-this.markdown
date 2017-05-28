@@ -5,9 +5,7 @@ categories: frontend
 tag: JS
 ---
 
-# javascript中的this关键字
-
-全局作用域中的this永远为global对象，在浏览器环境下即为window对象。
+**0、全局作用域中的this永远为global对象，在浏览器环境下即为window对象。**
 
 函数中的this根据函数的不同调用方式分下列4中情况：
 
