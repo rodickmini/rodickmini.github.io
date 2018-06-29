@@ -1,0 +1,189 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #045494;
+    background-image: url(https://ss2.meipian.me/2018/russia/wc/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top: 4px solid #e4c483;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 110px;
+    height: 120px;
+    background-image: url(https://ss2.meipian.me/2018/russia/wc/logo.png);
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px auto 0;
+}
+
+.map {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.vs-list {
+    width: 140px;
+}
+
+ul.vs-list li {
+    margin-bottom: 20px;
+}
+
+ul.vs-list li .time {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    font-family: arial;
+}
+
+ul.vs-list li .vs-bg {
+    background-color: #0E2C5E;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 1px 1px 2px 0px #000;
+    border-left: 2px solid #e4c482;
+    border-right: none;
+}
+
+.vs {
+    color: #e4c483;
+    text-align: center;
+    font-family: arial;
+    margin: -6px 0;
+}
+
+.nation {
+    font-family: PingFang SC;
+    width: 100%;
+    line-height: 42px;
+}
+
+.nation .nation-name {
+    color: #fff;
+    font-size: 16px;
+    text-align: right;
+}
+
+.nation .flag {
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    background-image: url(https://ss2.meipian.me/2018/russia/wc/f_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 379px;
+    border-radius: 100%;
+    background-position: -5px -4px;
+    border: 2px solid #e4c483;
+    float: right;
+    margin: 0 0 0 8px;
+}
+
+.vs-list.right .flag {
+    float: left;
+    margin: 0 8px 0 0;
+}
+
+.vs-list.right .nation .nation-name {
+    text-align: left;
+}
+
+ul.vs-list.right li .vs-bg {
+    border-right: 2px solid #e4c482;
+    border-left: none;
+}
+
+.flag.wulagui {
+    background-position: -332px -145px;
+}
+
+.flag.putaoya {
+    background-position: -285px -98px;
+}
+
+.flag.faguo {
+    background-position: -98px -51px;
+}
+
+.flag.agenting {
+    background-position: -5px -4px;
+}
+
+.flag.baxi {
+    background-position: -145px -4px;
+}
+
+.flag.moxige {
+    background-position: -5px -98px;
+}
+
+.flag.bilishi {
+    background-position: -98px -4px;
+}
+
+.flag.riben {
+    background-position: -285px -51px;
+}
+
+.flag.xibanya {
+    background-position: -145px -145px;
+}
+
+.flag.eluosi {
+    background-position: -332px -98px;
+}
+
+.flag.keluodiya {
+    background-position: -285px -4px;
+}
+
+.flag.danmai {
+    background-position: -332px -4px;
+}
+
+.flag.ruidian {
+    background-position: -191px -145px;
+}
+
+.flag.ruishi {
+    background-position: -238px -145px;
+}
+
+.flag.gelunbiya {
+    background-position: -192px -4px;
+}
+
+.flag.yinggelan {
+    background-position: -51px -51px;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
