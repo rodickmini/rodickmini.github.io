@@ -1,134 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>世界杯晋级之路</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="https://ss2.meipian.me/2018/russia/wc/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img {
+        vertical-align: middle;
+    }
+    .img-container {
+        position: relative;
+        /* display: inline-block; */
+        width: 300px;
+        margin: 20px auto;
+    }
+    .img-container img {
+        width: 100%;
+    }
+    .landmark {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        margin-left: -1.5px;
+        margin-top: -1.5px;
+        border-radius: 50%;
+        background-color: #ffd600;
+    }
+    
+    .face-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border: 2px solid #ffd600;
+        overflow: hidden;
+    }
+    .face-container img {
+        position: absolute;
+    }
+    </style>
 </head>
-
 <body>
-    <div class="logo"></div>
-    <div class="map">
-        <ul class="vs-list left">
-            <li>
-                <div class="time">7月1日 02:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag wulagui"></div>
-                        <div class="nation-name">乌拉圭</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag putaoya"></div>
-                        <div class="nation-name">葡萄牙</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">6月30日 22:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag faguo"></div>
-                        <div class="nation-name">法国</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag agenting"></div>
-                        <div class="nation-name">阿根廷</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">7月2日 22:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag baxi"></div>
-                        <div class="nation-name">巴西</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag moxige"></div>
-                        <div class="nation-name">墨西哥</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">7月3日 02:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag bilishi"></div>
-                        <div class="nation-name">比利时</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag riben"></div>
-                        <div class="nation-name">日本</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <ul class="vs-list right">
-            <li>
-                <div class="time">7月1日 22:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag xibanya"></div>
-                        <div class="nation-name">西班牙</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag eluosi"></div>
-                        <div class="nation-name">俄罗斯</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">7月2日 02:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag keluodiya"></div>
-                        <div class="nation-name">克罗地亚</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag danmai"></div>
-                        <div class="nation-name">丹麦</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">7月3日 22:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag ruidian"></div>
-                        <div class="nation-name">瑞典</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag ruishi"></div>
-                        <div class="nation-name">瑞士</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="time">7月4日 02:00</div>
-                <div class="vs-bg">
-                    <div class="nation clearfix">
-                        <div class="flag gelunbiya"></div>
-                        <div class="nation-name">哥伦比亚</div>
-                    </div>
-                    <div class="vs">vs</div>
-                    <div class="nation clearfix">
-                        <div class="flag yinggelan"></div>
-                        <div class="nation-name">英格兰</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+    <div id="app">
+        <input type="file" @change="onChange" accept="image/png, image/jpeg">
+        <div class="img-container" id="img-container">
+            <img v-bind:src="imgInfo.imgBase64" alt="" class="img-preview">
+            <template v-for="lmObj in landmarkArr">
+                <template v-for="lm in lmObj">
+                    <div class="landmark" v-bind:style="{top: lm.y + 'px', left: lm.x + 'px'}"></div>
+                </template>
+            </template>
+        </div>
+        
+        <div v-for="face in faces">
+            <div class="face-container" v-if="face.showFace">
+                <img v-bind:src="imgInfo.imgBase64" alt=""
+                    v-bind:style="{width: face.posInfo.imgDispWidth + 'px', height: face.posInfo.imgDispHeight + 'px', left: 0 - face.posInfo.imgDispLeft + 'px', top: 0 - face.posInfo.imgDispTop + 'px'}">
+            </div>
+            <p>年龄:{{face.age.value}}</p>
+            <p>性别:{{face.gender.value}}</p>
+            <p>种族:{{face.ethnicity.value}}</p>
+            <p>佩戴眼镜:{{face.glass.value}}</p>
+            <div>
+                <p>皮肤状况:{{face.skinstatus.health}}</p>
+                <p>粉刺:{{face.skinstatus.acne}}</p>
+                <p>黑眼圈:{{face.skinstatus.dark_circle}}</p>
+            </div>
+        </div>
     </div>
-</body>
+    <script src="./jquery.min.js"></script>
+    <script src="./vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            imgInfo: {
+                imgBase64: '',
+                oriWidth: 0,
+                oriHeight: 0
+            },
+            landmarkArr: [],
+            faces: [{
+                posInfo: {
+                    imgDispWidth: 0,
+                    imgDispHeight: 0,
+                    imgDispTop: 0,
+                    imgDispLeft: 9
+                },
+                age: {
+                    value: '--'
+                },
+                gender: {
+                    value: '--'
+                },
+                ethnicity: {
+                    value: '--'
+                },
+                glass: {
+                    value: '--'
+                },
+                skinstatus: {
+                    health: '--',
+                    acne: '--',
+                    dark_circle: '--'
+                },
+                showFace: false
+            }]
+        },
+        methods: {
+            cleanData: function() {
+                this.landmarkArr = [];
+                this.faces = [{
+                    posInfo: {
+                        imgDispWidth: 0,
+                        imgDispHeight: 0,
+                        imgDispTop: 0,
+                        imgDispLeft: 9
+                    },
+                    age: {
+                        value: '--'
+                    },
+                    gender: {
+                        value: '--'
+                    },
+                    ethnicity: {
+                        value: '--'
+                    },
+                    glass: {
+                        value: '--'
+                    },
+                    skinstatus: {
+                        health: '--',
+                        acne: '--',
+                        dark_circle: '--'
+                    },
+                    showFace: false
+                }]
+            },
+            onChange: function(e) {
+                var r = new FileReader();
+                var f = e.target.files[0];
+                if (f) {
+                    r.readAsDataURL(f);
+                    var self = this;
+                    this.cleanData();
+                    r.onload = function (e) {
+                        self.imgInfo.imgBase64 = e.target.result;
+                        var img = new Image();
+                        img.onload = function() {
+                            self.imgInfo.oriWidth = img.width;
+                            self.imgInfo.oriHeight = img.height;
+                            var containerWidth = $('#img-container').width();
+                            console.log(containerWidth);
+                            $('#img-container').css('zoom', 300 / containerWidth);
+                        }
+                        img.src = self.imgInfo.imgBase64;
+                        self.upImg(f);
+                    }
+                }
+                
+            },
 
+            upImg: function(f) {
+                console.log('up...img...')
+                let url = 'https://api-cn.faceplusplus.com/facepp/v3/detect';
+                let data = new FormData();
+                data.append('api_key', "jnQLiPG-tf_gV8GR7BbdTH7_aDNH01UN");
+                data.append('api_secret', "QtsWoPaWN4OI8d_akkgqIt1WFkMgesXc");
+                data.append('image_file', f);
+                data.append('return_attributes', "gender,age,smiling,ethnicity,skinstatus,eyestatus");
+                data.append('return_landmark', 1);
+                var self = this;
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success(data) {
+                        if(data.faces.length === 0) {
+                            alert('未识别到人脸，请重新上传！');
+                            return;
+                        }
+                        self.displayFace(data.faces);
+                        self.displayLandMarks(data.faces);
+                    }
+                })
+            },
+
+            displayFace: function(faces) { // data.faces[0].face_rectangle
+                var oriWidth = this.imgInfo.oriWidth, oriHeight = this.imgInfo.oriHeight;
+                this.faces = faces.map(function(face) {
+                    var faceRect = face.face_rectangle
+                    var dispWidth = parseInt((100 / parseInt(faceRect.width)) * parseInt(oriWidth))
+                    var dispHeight = parseInt((100 / parseInt(faceRect.height)) * parseInt(oriHeight))
+                    return {
+                        posInfo: {
+                            imgDispWidth: dispWidth,
+                            imgDispHeight: dispHeight,
+                            imgDispTop: parseInt((parseInt(faceRect.top) / parseInt(oriHeight)) * dispHeight),
+                            imgDispLeft: parseInt((parseInt(faceRect.left) / parseInt(oriWidth)) * dispWidth)
+                        },
+                        landmark: face.landmark,
+                        age: {
+                            value: face.attributes ? face.attributes.age.value : ''
+                        },
+                        gender: {
+                            value: face.attributes ? face.attributes.gender.value : ''
+                        },
+                        ethnicity: {
+                            value: face.attributes ? face.attributes.ethnicity.value : ''
+                        },
+                        glass: {
+                            value: face.attributes ? face.attributes.glass.value : ''
+                        },
+                        skinstatus: face.attributes ? face.attributes.skinstatus : '',
+                        showFace: true
+                    }
+                })
+            },
+
+            displayLandMarks: function(faces) {
+                // landMarkArr 有几张脸，就有几项，每项都是个对象，存储着点的位置集合
+                var landmarkArr = faces.map(function(face) {
+                    return face.landmark;
+                }).filter(function(landMarkObj) { // 过滤掉没有landmark属性的脸
+                    return landMarkObj;
+                });
+                var ratio = 300 / this.imgInfo.oriWidth;
+                console.log(landmarkArr);
+                var result = landmarkArr.map(function(lmObj) {
+                    var tmpObj = {};
+                    Object.keys(lmObj).forEach(function(key) {
+                        var valueObj = lmObj[key];
+                        tmpObj[key] = {
+                            x: valueObj.x * ratio,
+                            y: valueObj.y * ratio
+                        }
+                    })
+                    
+                    return tmpObj;
+                })
+                this.landmarkArr = result;
+            }
+        }
+    })
+    </script>
+</body>
 </html>
