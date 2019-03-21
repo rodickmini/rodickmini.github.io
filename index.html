@@ -6,42 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>人脸识别demo</title>
     <style>
-    img {
-        vertical-align: middle;
-    }
-    .img-container {
-        position: relative;
-        /* display: inline-block; */
-        width: 300px;
-        margin: 20px auto;
-    }
-    .img-container img {
-        width: 100%;
-    }
-    .landmark {
-        position: absolute;
-        width: 3px;
-        height: 3px;
-        margin-left: -1.5px;
-        margin-top: -1.5px;
-        border-radius: 50%;
-        background-color: #ffd600;
-    }
-    
-    .face-container {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        border: 2px solid #ffd600;
-        overflow: hidden;
-    }
-    .face-container img {
-        position: absolute;
-    }
+        .nav {
+            margin-bottom: 50px;
+        }
+        img {
+            vertical-align: middle;
+        }
+        .img-container {
+            position: relative;
+            /* display: inline-block; */
+            width: 300px;
+            margin: 20px auto;
+        }
+        .img-container img {
+            width: 100%;
+        }
+        .landmark {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            margin-left: -1.5px;
+            margin-top: -1.5px;
+            border-radius: 50%;
+            background-color: #ffd600;
+        }
+        
+        .face-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ffd600;
+            overflow: hidden;
+        }
+        .face-container img {
+            position: absolute;
+        }
     </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="./index.html">人脸识别</a>
+        <a href="./merge.html">人脸融合</a>
+    </div>
     <div id="app">
+        <h1>人脸识别</h1>
         <input type="file" @change="onChange" accept="image/png, image/jpeg">
         <div class="img-container" id="img-container">
             <img v-bind:src="imgInfo.imgBase64" alt="" class="img-preview">
@@ -195,7 +203,7 @@
                         },
                         error(jqXHR, textStatus, errorThrown) {
                             self.loading = false;
-                            alert('出错了！')
+                            alert('图片太大！')
                         }
                     })
                 },
