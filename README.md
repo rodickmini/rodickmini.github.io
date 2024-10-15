@@ -12,6 +12,4 @@ My website is hosted on GitHub Pages and can be found at [https://rodickmini.git
 ## Contact
 You can reach me at [rodickcai@gmail.com](mailto:rodickcai@gmail.com)
 
-## License
-This project is licensed under the [MIT License](LICENSE).
 
