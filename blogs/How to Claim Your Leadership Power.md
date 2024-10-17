@@ -1,4 +1,4 @@
-# How to Claim Your Leadership Power | Michael Timms | TED
+# [2024/10/17] How to Claim Your Leadership Power | Michael Timms | TED
 
 [https://www.youtube.com/watch?v=dIYmzf21d1g](https://www.youtube.com/watch?v=dIYmzf21d1g)
 
