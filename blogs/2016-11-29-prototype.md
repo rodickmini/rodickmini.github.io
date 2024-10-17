@@ -9,6 +9,8 @@ Date: 2016-11-29
 
 ## 函数的prototype属性
 
+![](../assets/images/posts/prototype/layout.jpg)
+
 JS中的**函数**有一个属性`prototype`，指向其**原型对象**，其它类型的变量不存在该属性。
 
 ```javascript
