@@ -65,8 +65,7 @@ B.S. in Computer Science and Technology, 2007 - 2011
 
 # Blogs
 
-[2024-10-17 How to Claim Your Leadership Power](./blogs/2024-10-17-HowtoClaimYourLeadershipPower.html)
-
-[2017-05-28 javascript this](./blogs/2017-05-28-javascript-this.md)
-[2017-05-26 standards mode quirks mode](./blogs/2017-05-26-standards-mode-quirks-mode.md)
-[2017-05-26 cookie localstorage sessionstorage](./blogs/2017-05-26-cookie-localstorage-sessionstorage.md)
+- [2024-10-17 How to Claim Your Leadership Power](./blogs/2024-10-17-how-to-claim-your-leadership-power.md)
+- [2017-05-28 javascript this](./blogs/2017-05-28-javascript-this.md)
+- [2017-05-26 standards mode quirks mode](./blogs/2017-05-26-standards-mode-quirks-mode.md)
+- [2017-05-26 cookie localstorage sessionstorage](./blogs/2017-05-26-cookie-localstorage-sessionstorage.md)
