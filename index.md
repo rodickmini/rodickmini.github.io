@@ -69,3 +69,8 @@ B.S. in Computer Science and Technology, 2007 - 2011
 - [2017-05-28 javascript this](./blogs/2017-05-28-javascript-this.md)
 - [2017-05-26 standards mode quirks mode](./blogs/2017-05-26-standards-mode-quirks-mode.md)
 - [2017-05-26 cookie localstorage sessionstorage](./blogs/2017-05-26-cookie-localstorage-sessionstorage.md)
+- [浅谈JS原型链](./blogs/2016-11-29-prototype.md)
+- [typeof操作符](./blogs/2016-11-22-typeof.md)
+- [Javascript Array-like objects](./blogs/2016-11-22-array-like-objects.md)
+- [CSS Block Formatting Context(BFC)详解](./blogs/2016-11-21-bfc.md)
+- [CSS 中的外边距折叠（margin collapse）](./blogs/2016-11-19-margin-collapse.md)

@@ -1,9 +1,6 @@
----
-layout: post
-title: Array-like objects
-categories: frontend
-tag: JS
----
+# Javascript Array-like objects
+
+Date: 2016-11-22
 
 JS中有一些对象看起来像数组，但其实不是数组，它们被称为“类似数组的对象”（array-like objects）。这篇文章将介绍什么样的对象是array-like object（为了简单，下文简称ALO）的；平时开发中，遇到ALO应该怎么处理。
 

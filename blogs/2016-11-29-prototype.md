@@ -1,9 +1,6 @@
----
-layout: post
-title: 浅谈JS原型链
-categories: frontend
-tag: JS
----
+# 浅谈JS原型链
+
+Date: 2016-11-29
 
 > JavaScript是一门基于原型继承的语言
 > 
