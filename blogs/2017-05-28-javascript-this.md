@@ -1,9 +1,6 @@
----
-layout: post
-title: 彻底搞清楚javascript中的this
-categories: frontend
-tag: JS
----
+# javascript this 详解
+
+Date: 2017-05-28
 
 **0、全局作用域中的this永远为global对象，在浏览器环境下即为window对象。**
 

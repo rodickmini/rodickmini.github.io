@@ -1,8 +1,6 @@
----
-layout: post
-title: cookie localStorage sessionStorage对比
-categories: frontend
----
+# 浏览器cookie, localstorage, sessionstorage区别
+
+Date: 2017-05-26
 
 # cookie localStorage sessionStorage对比
 

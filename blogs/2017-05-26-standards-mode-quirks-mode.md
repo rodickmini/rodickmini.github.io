@@ -1,8 +1,4 @@
----
-layout: post
-title: 标准模式（standards mode）和怪异模式(quirks mode)
-categories: frontend
----
+Data: 2017-05-26
 
 # 什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)
 
