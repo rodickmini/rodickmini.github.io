@@ -1,4 +1,10 @@
-# [2024/10/17] How to Claim Your Leadership Power | Michael Timms | TED
+# How to Claim Your Leadership Power | Michael Timms | TED
+
+Date: 2024-10-17
+
+Author: David
+
+Tags: #TED #Leadership #PersonalAccountability #Blame
 
 [https://www.youtube.com/watch?v=dIYmzf21d1g](https://www.youtube.com/watch?v=dIYmzf21d1g)
 
