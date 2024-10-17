@@ -4,9 +4,7 @@ Date: 2024-10-17
 
 Author: David
 
-Tags: #TED #Leadership #PersonalAccountability #Blame
-
-[https://www.youtube.com/watch?v=dIYmzf21d1g](https://www.youtube.com/watch?v=dIYmzf21d1g)
+Source video URL: [https://www.youtube.com/watch?v=dIYmzf21d1g](https://www.youtube.com/watch?v=dIYmzf21d1g)
 
 Are there any other parents here who have struggled to get your kids out the door on time? (Laughter) So, you know, right? It's like herding kittens. (Laughter) My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything.
 
