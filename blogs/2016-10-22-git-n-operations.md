@@ -1,9 +1,4 @@
----
-layout: post
-title: Git最常用的n个操作
-categories: frontend
-tag: 工程
----
+# Git最常用的n个操作
 
 ![git_draft](http://blog.rodickcai.com/assets/images/posts/git/git_draft.jpg)
 

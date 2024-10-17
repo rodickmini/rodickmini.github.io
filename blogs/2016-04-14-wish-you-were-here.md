@@ -1,8 +1,7 @@
----
-layout: post
-title:  Wish you were here
-categories: music
----
+# Wish you were here
+
+Date: 2016-04-14
+
 
 So
 

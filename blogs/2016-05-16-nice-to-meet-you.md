@@ -1,9 +1,6 @@
----
-title: 离开
-layout: post
-categories: life
-tag: 歌词
----
+# nice to meet you (离开)
+
+Date: 2016-05-16
 
 我从九月走来 / 而在五月离开 / 来的时候热血满怀 / 到现在不好不坏
 

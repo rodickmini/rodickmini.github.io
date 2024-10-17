@@ -1,9 +1,6 @@
----
-layout: post
-title: JS去除字符串前后的空格
-categories: frontend
-tag: JS
----
+# JS去除字符串前后的空格
+
+Date: 2016-11-16
 
 在很多场景中，会遇到“把一个字符串前后的空格去掉”的需求，例如提交表单时。
 

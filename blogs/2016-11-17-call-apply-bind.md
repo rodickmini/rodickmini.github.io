@@ -1,21 +1,18 @@
----
-layout: post
-title: call apply bind简析
-categories: frontend
-tag: JS
----
+# call apply bind简析
 
-# Function.prototype.call()
+Date: 2016-11-17
+
+## Function.prototype.call()
 
 > `call()`方法可以**指定this值**，传入若干参数，调用该函数（方法）
 
-## 语法
+### 语法
 
 > fun.call(thisArg[, arg1[, arg2[, ...]]])
 
-## 作用
+### 作用
 
-### 使用call方法调用函数并指定`this`
+#### 使用call方法调用函数并指定`this`
 
 ```javascript
 function speak(when, msg) {
@@ -36,7 +33,7 @@ speak.call(kiang, "1948年底", "娘希匹！")
 //校长 蒋老师 在 1948年底 说了： 娘希匹！
 ```
 
-### 使用call方法实现继承
+#### 使用call方法实现继承
 
 ```javascript
 function Product(name, price) {
@@ -59,15 +56,15 @@ var clothes = new Clothes('机车皮衣', 5888)
 var computer = new Computer('Macbook', 9998)
 ```
 
-# Function.prototype.apply()
+## Function.prototype.apply()
 
 > `apply()`和`call()`方法作用相同，只是参数传递方式不同
 
-## 语法
+### 语法
 
 > fun.apply(thisArg[, argsArray])
 
-## 用法
+### 用法
 
 还是以上述`speak()`函数举例，如果使用`apply()`方法，调用方式应该是：
 
@@ -75,23 +72,23 @@ var computer = new Computer('Macbook', 9998)
 speak.apply(mao, ["1949年10月1日", "中华人民共和国中央人民政府今天成立啦！"])
 ```
 
-# Function.prototype.bind()
+## Function.prototype.bind()
 
 > `bind()`函数执行后会**返回一个函数**，`bind()`函数接受的参数列表和`call()`函数相同，第一个参数的作用也是传递this值，剩下的参数则会传递给原函数
 
-## 语法
+### 语法
 
 > fun.bind(thisArg[, arg1[, arg2[, ...]]])
 
-## 返回值
+### 返回值
 
 返回由指定的this值和初始化参数改造的**原函数拷贝**
 
-## 描述
+### 描述
 
 bind() 函数会创建一个新函数（称为**绑定函数**），新函数与被调函数（绑定函数的目标函数）具有相同的函数体（在 ECMAScript 5 规范中内置的call属性）。当目标函数被调用时 this 值绑定到 bind() 的第一个参数，该参数不能被重写。绑定函数被调用时，bind() 也接受预设的参数提供给原函数。一个绑定函数也能使用new操作符创建对象：这种行为就像把原函数当成构造器。提供的 this 值被忽略，同时调用时的参数被提供给模拟函数（即**绑定函数**）。
 
-## 用法
+### 用法
 
 上面的`speak()`函数，如果用`bind`调用，写法如下：
 
@@ -105,7 +102,7 @@ speak.bind(mao, "1949年10月1日", "中华人民共和国中央人民政府今�
 *注意！上面的第二种写法最后的`()`不能忽略哦~因为调用`Function.prototype.bind`只是返回了一个函数（其实就是个闭包），必须接上`()`操作符才能**执行**这个函数！*
 
 
-### 偏函数（Partial Function）
+#### 偏函数（Partial Function）
 
 注意到，如果`bind()`函数只接受一个参数，那么他的作用其实正如`bind`这个词的意思：**绑定**，也就是说将这个函数“绑定”到这个参数对象本身，并返回一个新的函数。那么从此以后，这个新的函数体内的`this`就永远指向了传入的这个参数对象了。
 
@@ -141,7 +138,7 @@ var successLog = logger.bind(undefined, "SUCESS")
 successLog()
 ```
 
-### 使用apply实现一个类似于bind的`xxx`函数
+#### 使用apply实现一个类似于bind的`xxx`函数
 
 ```javascript
 Function.prototype.xxx = function(obj) {

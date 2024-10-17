@@ -1,8 +1,6 @@
----
-layout: post
-title:  Comfortably numb
-categories: music
----
+# Comfortably numb
+
+Date: 2016-04-14
 
 Hello.
 

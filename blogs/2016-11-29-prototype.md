@@ -57,8 +57,6 @@ JS是基于原型继承的面向对象语言，这是它和C++、Java等其他�
 
 **注意：为了便于理解，建议把“函数”和“函数的原型”想象成内存中独立的两个块，函数的`prototype`指针，指向了“函数的原型”这个对象**
 
-![prototype](http://blog.rodickcai.com/assets/images/posts/prototype/layout.jpg)
-
 1. `f1`对象是构造函数`Foo`的“实例”，因此`f1.__proto__ === Foo.prototype`
 2. 函数`Foo`的`prototype`属性指向了“函数的原型”，即`Foo.prototype`
 3. 函数的原型有一个`constructor`属性，指向函数本身，也就是说`Foo.prototype.constructor === Foo`。**另外`f1`对象也有一个`constructor`属性，表示对象的构造函数，因此`f1.constructor === Foo`**
