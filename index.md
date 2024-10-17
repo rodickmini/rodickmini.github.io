@@ -1,7 +1,11 @@
 
-# Cai You (David)
+# Resume
 
-rodickcai@gmail.com | Nanjing, Jiangsu, China
+```javascript
+const name = 'Cai You (David)'
+const email = 'rodickcai@gmail.com'
+const location = 'Nanjing, Jiangsu, China'
+```
 
 # PROFESSIONAL EXPERIENCE
 
