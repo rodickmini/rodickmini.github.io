@@ -6,7 +6,7 @@ Source post URL: [https://engfluent.com/how-to-improve-spoken-english/](https://
 
 I've read a post on website [engfluent.com](https://engfluent.com/) about improving spoken English. Today I'm going to summarize it.
 
-## Implicit vs Explicit Knowledge
+## Chapter 1: Implicit vs Explicit Knowledge
 
 You cannot impove your speaking by studying the English grammar. Because speaking is an implicit knowledge, while grammar is an explicit knowledge. 
 
@@ -15,11 +15,11 @@ Implicit Knowledge is knowledge you can use automatically, without conscious att
 If you want to speak good English, you must gain your time on implicit knowledge while reduce time on activities that result in explicit knowledge.
 
 
-## Three ways to improve your English speaking skills
+## Chapter 2: Three ways to improve your English speaking skills
 
 ### Method 1: Listen to English conversations
 
-When you're listening to an English conversation, the unconscious part of your brain is learning English without  awareness. You can listen English through podcasts or from a Youtube channel on whatever the topics you're interested in. After a period of time you spend on listening, you will learn so many methods that other people express a certain idea. And when it's time for you to output, you'll have so many matetials to choose. So, the right way to build implicit knowledge is not by studying, but by experience and practice.
+When you're listening to an English conversation, the unconscious part of your brain is learning English without  awareness. You can listen English through podcasts or from a Youtube channel on whatever the topics you're interested in. After a period of time you spend on listening, you will learn so many methods that other people express a certain idea. And when it's time for you to output, you'll have so many matetials to choose from.
 
 ### Method 2: Practice speaking English
 
@@ -33,11 +33,11 @@ Don't loose faith and patience. Just try to speak as much as possible.
 
 ### Method 3: Read in English
 
-To speak English well, you must increase your vocabulary, and reading is an excellent way to do that. You can read novals, news, blogs, non-fiction books. Or you can subscribe to some English websites, leave them your email address, and you'll receive emails from the sites, those emails are very good and fresh materials for reading, even if they are ads.
+To speak English well, you must increase your vocabulary, and reading is an excellent way to do that. You can read news, blogs, non-fiction books or novels. Or you can subscribe to some English websites, leave them your email address, and you'll receive emails from the sites, those emails are very good and fresh materials for reading, even if they are ads.
 
 By engaging in both listening and reading, you learn both the pronunciation and the spelling of English vocabulary. This is a very powerful way to improve your English comprehension.
 
-## How to add these activities to your daily routine
+## Chapter 3: How to add these activities to your daily routine
 
 Most of us are very busy nowadays. But, in order to improve your English, it worth to add these activities to your daily routine.
 
@@ -55,7 +55,7 @@ Moreover, morning is the time of day when your energy is at its peak. This makes
 
 
 
-## How to speak English fluently
+## Chapter 4: How to speak English fluently
 
 ### 1. Increase the duration of your speaking pactice
 
