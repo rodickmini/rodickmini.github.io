@@ -69,6 +69,7 @@ B.S. in Computer Science and Technology, 2007 - 2011
 
 # Blogs
 
+- [2024-10-18 How to Improve Spoken English](./blogs/2024-10-18-how-to-improve-spoken-english.md)
 - [2024-10-17 How to Claim Your Leadership Power](./blogs/2024-10-17-how-to-claim-your-leadership-power.md)
 - [2017-05-28 javascript this](./blogs/2017-05-28-javascript-this.md)
 - [2017-05-26 standards mode quirks mode](./blogs/2017-05-26-standards-mode-quirks-mode.md)
