@@ -53,18 +53,45 @@ Moreover, morning is the time of day when your energy is at its peak. This makes
 
 ### Suggestion 3: Read before bed (and/or during mindless activities)
 
-
+When it's near bedtime, many people like unwind by browsing social media, playing games or checking wechat moments. Replace those activities with English reading, because it's a great way to relax and improve your English at the same time.
 
 ## Chapter 4: How to speak English fluently
 
 ### 1. Increase the duration of your speaking pactice
 
+1. Reducing the time you spend on social media and other time wasters
+2. Practice long and hard only during weekends or holidays
+
 ### 2. Expose yourself to a wide range of vocabulary
+
+The number of words in English world is enormous. There are not only common words like breakfast, happy, or teacher, but also many proffesional words in different fields such as business, healthcare, science, financial, etc. In order to use these words with ease, remember to vary the English meterials you use. Listen, read and practice with material on many different topics.
 
 ### 3. Vary (change) your speaking practice
 
+Studies show that variable practice is an effective way to improve skills.
+
+Here is an example:
+
+1. Practice by immitating native speakers
+2. Switch to talking to yourself about random topics
+3. Switch to chatting with a native speaker through Cambly App
+
 ### 4. Give yourself a project to do in English
+
+You can start a channel on YouTube or Xiaohongshu to introduce what you're recently learning to your subscribers, or share your knowledge of your profession in English. The project will force you to enhance your knowledge and push you to give a clear explanation in English.
 
 ### 5. Improve your English pronunciation
 
+Record yourself talking in English and listen to it. If you have a little accent, it's probably okay, and it won't prevent others from understanding you. But if your accent is too strong, you have to improve your pronunciation as well.
+
 ### 6. Be willing to pay the price
+
+Speaking English is a skill, and just like other skills, you need to invest a lot of time to reach an advanced level. If you don't have enough time, try to reduce the time spent on time wasters, such as:
+
+1. Social media
+2. Movies and TV shows (in your native language)
+3. Pick up your phone too frequently
+
+These time wasters don't just waste your time, but also cause addiction and weaken your concentration. Althogh it's very hard to do so, always remind yourself *How bad you want to be able to speak English fluently?*
+
+If you can make those sacrifices, nothing can stop you from becoming fluent in English.
