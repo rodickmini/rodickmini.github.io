@@ -99,7 +99,7 @@
             </div>
           
           <div class="post-content">
-            <p><img src="../assets/images/posts/git/git_draft.jpg" alt="git_draft" /></p>
+            <p><img src="/images/git/git_draft.jpg" alt="git常用操作草图" /></p>
 <p>上面这张图是我最开始学Git，按照自己的理解画出来的，可能会有问题，但总体问题不大。</p>
 <p>其实Git是个非常复杂的系统，很多细节的特性，平时用到的不多，我也不太清楚，这篇文章只说我日常开发中最常用的操作。</p>
 <h2 id="git-clone"><a class="markdownIt-Anchor" href="#git-clone"></a> git clone</h2>
@@ -109,7 +109,7 @@
 </blockquote>
 <h3 id="用法"><a class="markdownIt-Anchor" href="#用法"></a> 用法</h3>
 <p>在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，因此请注意选择HTTPS的地址）</p>
-<p><img src="../assets/images/posts/git/clone.jpg" alt="" /></p>
+<p><img src="/images/git/clone.jpg" alt="git clone 示意图" /></p>
 <p>进入到工作目录（通常我们会把各个项目放在同一个文件夹，例如workingDir啥的，当然，你可以在任意目录做git操作），敲下命令</p>
 <p><code>git clone https://github.com/rodickmini/taptempo.git</code></p>
 <p>这个操作会把taptempo项目下载到workingDir下的taptempo目录，如果你不想使用taptempo这个目录名，可以指定一个目录名，比如taptempo2</p>
@@ -130,7 +130,7 @@
 </blockquote>
 <h3 id="用法-3"><a class="markdownIt-Anchor" href="#用法-3"></a> 用法</h3>
 <p><code>git status</code></p>
-<p><img src="../assets/images/posts/git/git_status.png" alt="git_status" /></p>
+<p><img src="/images/git/git_status.png" alt="git status 示意图" /></p>
 <ul>
 <li>Changes to be committed列出了已经add了还没有commit的文件</li>
 <li>Changes not staged for commit列出了修改了，但还没有add的文件</li>
@@ -153,7 +153,7 @@
 <p><strong>但是，执行这个命令要慎重哦！一旦执行，你的所有修改都找不回来啦！</strong></p>
 <p>所以，最好在执行之前，先看一下这次修改了那些东西，那么就需要使用git diff命令：</p>
 <p><code>git diff index.html</code></p>
-<p><img src="../assets/images/posts/git/git_diff.png" alt="git_diff" /></p>
+<p><img src="/images/git/git_diff.png" alt="git diff 示意图" /></p>
 <p><code>git diff</code> 命令会调出一个类似于vi的文本编辑器（只读），里面红色的部分说明你删除了<code>&lt;h1&gt;catch the beat&lt;/h1&gt;</code>这一行，绿色的部分说明你添加了<code>display: block;</code>这一行。看完了，按<code>q</code>键就可以退出啦~</p>
 <p>经过上面这几步“折腾”，你就可以信心十足地决定把哪些文件add进索引库，哪些只是手贱现在要放弃修改的！</p>
 <h2 id="git-commit"><a class="markdownIt-Anchor" href="#git-commit"></a> git commit</h2>
@@ -186,7 +186,7 @@
 <p><code>git commit</code></p>
 <p>啥？我读书少你不要骗我！最高级的命令怎么是最短的？！别急，往下看~此时git又会调出我们的老朋友<code>vi</code>编辑器：</p>
 <p>将输入法调到英文状态，按下<code>Shift+G</code>再按<code>o</code>键，<code>vi</code>将在文件最后一行待命，此时就可以输入详细的commit message啦~</p>
-<p><img src="../assets/images/posts/git/git_commit.png" alt="git_diff" /></p>
+<p><img src="/images/git/git_commit.png" alt="git commit 示意图" /></p>
 <p>注意，commit message要注意及时换行，不要超过开头注释部分的宽度。</p>
 <p>commit message在某些系统里面可以被转化成email，所以格式类似于email，第一行是主题，空一行，后面的是正文。</p>
 <p>写完之后，按10次<code>ESC</code>键，输入<code>:wq</code>即可退出<code>vi</code>编辑器，commit操作完成！深藏功与名！</p>
@@ -245,7 +245,7 @@
 <p>会显示最基本的log信息，但是不直观，不能看清分支之间的分叉、合并、前因后果，所以个人习惯加上<code>--all``--decorate``--graph</code>这3个参数：</p>
 <p><code>git log --all --decorate --graph</code></p>
 <p>出来的log是这样色儿的：</p>
-<p><img src="../assets/images/posts/git/git_log.jpg" alt="git_log" /></p>
+<p><img src="/images/git/git_log.jpg" alt="git log 示意图" /></p>
 <p><code>git log</code>平时是和<code>git status</code>一样最常用的命令，毕竟强迫症，需要不断通过这两个命令找到安全感。。。</p>
 <p><strong>THE END</strong></p>
 
