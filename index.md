@@ -86,9 +86,3 @@ B.S. in Computer Science and Technology, 2007 - 2011
 - [2016-11-16 JS去除字符串前后的空格](./blogs/2016-11-16-string-trim.md)
 - [2016-10-22 Git最常用的n个操作](./blogs/2016-10-22-git-n-operations.md)
 - [2016-10-10 语义化版本号（semver）解析](./blogs/2016-10-10-semver.md)
-<!-- - [2016-05-16 nice to meet you (离开)](./blogs/2016-05-16-nice-to-meet-you.md)
-- [2016-05-12 5月歌词（谎言）](./blogs/2016-05-12-lyrics-may.md)
-- [2016-04-15 pardon（包容）](./blogs/2016-04-15-pardon.md)
-- [2016-04-14 Wish you were here](./blogs/2016-04-14-wish-you-were-here.md)
-- [2016-04-14 生活啊](./blogs/2016-04-14-lifea.md)
-- [2016-04-14 Comfortably numb](./blogs/2016-04-14-comfortably-numb.md) -->
