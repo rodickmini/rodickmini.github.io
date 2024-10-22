@@ -1,11 +1,12 @@
 
 # Resume
 
-```javascript
-const name = 'Cai You (David)'
-const email = 'rodickcai@gmail.com'
-const location = 'Nanjing, Jiangsu, China'
-```
+
+> Cai You (David)
+> 
+>rodickcai@gmail.com
+>
+>Nanjing, Jiangsu, China
 
 # PROFESSIONAL EXPERIENCE
 
@@ -13,7 +14,7 @@ const location = 'Nanjing, Jiangsu, China'
 
 *the company name is temporarily confidencial*
 
-Nanjing, Jiangsu, China | 2022 - Present
+Nanjing, Jiangsu, China. 2022 - Present
 
 ### Senior Product Manager
 
@@ -26,7 +27,7 @@ Nanjing, Jiangsu, China | 2022 - Present
             
 *Top content creation and sharing App with investment from Tencent, Matrix Partners; Valued at ¥1B*
         
-Nanjing, Jiangsu, China | 2017 - 2022
+Nanjing, Jiangsu, China. 2017 - 2022
     
 ### Senior Product Manager (2019 - 2022)
 
@@ -42,7 +43,7 @@ Nanjing, Jiangsu, China | 2017 - 2022
 
 *Provider of O2O car battery services through WeChat*
 
-Beijing, China | 2014 - 2017
+Beijing, China. 2014 - 2017
     
 ### Co-Founder & Front-End Lead
     
