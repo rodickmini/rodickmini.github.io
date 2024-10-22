@@ -8,6 +8,7 @@ tags: tech
 > 
 > ——Douglas Crockford
 
+![原型链示意图](/images/prototype/layout.jpg)
 
 ## 函数的prototype属性
 

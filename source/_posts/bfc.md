@@ -5,17 +5,17 @@ tags: tech
 ---
 
 > Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.
-
+> 
 > In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
-
+> 
 > In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). This is true even in the presence of floats (although a box's line boxes may shrink due to the floats), unless the box establishes a new block formatting context (in which case the box itself may become narrower due to the floats).
 
 上面这段话是W3C官方在CSS2.1规范里对“块级格式化上下文”（BFC, Block formmating contexts）的[定义](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)。渣翻译如下：
 
 > 有一些元素会为它的内容建立一个新的块级格式化上下文。这些元素包括：浮动元素，绝对定位的元素，非块级元素（比如 `inline-blocks`, `table-cells`, 和 `table-captions`等），`overflow`属性值只要不是`visible`的块级元素。
-
+> 
 > 在一个BFC中，盒子从父元素的顶部开始一个接一个垂直排列。兄弟盒子之间垂直方向的距离由`margin`属性的值决定。在同一个BFC中，毗邻的块级盒子之间垂直方向的`margin`会合并。
-
+> 
 > 在一个BFC中，每个盒子的左边沿和父元素的左边沿紧贴（对于从右到左的格式化，右边沿紧贴）。即使盒子是浮动的（float），情况也是如此（尽管一个盒的行盒可能会因为浮动收缩），除非盒子自己产生了一个新的BFC（这种情况下盒子本身会因为其它浮动的元素而变窄）。
 
 
@@ -77,7 +77,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 ```
 效果如下图：
 
-![bfc_clear](../assets/images/posts/bfc/bfc-clearfix.png)
+![bfc clear示意图](/images/bfc/bfc-clearfix.png)
 
 此时，触发父元素的BFC，由于上述行为5：BFC计算高度时会包含其中的浮动元素，父元素的高度会包含两个浮动的子元素，高度即被“撑开”了，代码如下：
 
@@ -103,7 +103,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 
 效果如下图：
 
-![bfc_clear_1](../assets/images/posts/bfc/bfc-clearfix-1.png)
+![bfc clear 示意图](/images/bfc/bfc-clearfix-1.png)
 
 ### 左右定宽，中间自适应布局
 
@@ -135,7 +135,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 
 根据行为3，会产生以下效果：
 
-![bfc_default_layout](../assets/images/posts/bfc/bfc-default-layout.png)
+![bfc default layout 示意图](/images/bfc/bfc-default-layout.png)
 
 如果触发中间box的BFC，比如做以下设置：
 
@@ -149,7 +149,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 
 根据行为4，会产生以下效果：
 
-![bfc_fluid_layout](../assets/images/posts/bfc/bfc-fluid-layout.png)
+![bfc fluid layout 示意图](/images/bfc/bfc-fluid-layout.png)
 
 ### 解决外边距折叠
 
@@ -171,7 +171,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 
 产生了如下效果：
 
-![margin_collapse](../assets/images/posts/bfc/margin-collapse.png)
+![margin collapse 示意图](/images/bfc/margin-collapse.png)
 
 此时，如果把其中一个`.box`用一个BFC包裹起来，或者干脆把两个`.box`分别用BFC包裹起来，则可避免外边距折叠，代码如下：
 
@@ -194,7 +194,7 @@ BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端�
 
 效果如下：
 
-![margin_collapse](../assets/images/posts/bfc/margin-not-collapse.png)
+![margin collapse 示意图](/images/bfc/margin-not-collapse.png)
 
 
 ## 总结

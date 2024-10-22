@@ -4,7 +4,7 @@ date: 2016-10-22 14:00
 tags: tech
 ---
 
-![git_draft](../assets/images/posts/git/git_draft.jpg)
+![git常用操作草图](/images/git/git_draft.jpg)
 
 上面这张图是我最开始学Git，按照自己的理解画出来的，可能会有问题，但总体问题不大。
 
@@ -20,7 +20,7 @@ tags: tech
 
 在浏览器中打开github或公司的gitlab，进入项目，复制项目的git地址（如果公司的gitlab不支持SSH，因此请注意选择HTTPS的地址）
 
-![](../assets/images/posts/git/clone.jpg)
+![git clone 示意图](/images/git/clone.jpg)
 
 进入到工作目录（通常我们会把各个项目放在同一个文件夹，例如workingDir啥的，当然，你可以在任意目录做git操作），敲下命令
 
@@ -54,7 +54,7 @@ tags: tech
 
 `git status`
 
-![git_status](../assets/images/posts/git/git_status.png)
+![git status 示意图](/images/git/git_status.png)
 
 - Changes to be committed列出了已经add了还没有commit的文件
 - Changes not staged for commit列出了修改了，但还没有add的文件
@@ -90,7 +90,7 @@ tags: tech
 
 `git diff index.html`
 
-![git_diff](../assets/images/posts/git/git_diff.png)
+![git diff 示意图](/images/git/git_diff.png)
 
 `git diff` 命令会调出一个类似于vi的文本编辑器（只读），里面红色的部分说明你删除了`<h1>catch the beat</h1>`这一行，绿色的部分说明你添加了`display: block;`这一行。看完了，按`q`键就可以退出啦~
 
@@ -138,7 +138,7 @@ commit操作也是考验一个开发者职业素养的试金石，老司机搂�
 
 将输入法调到英文状态，按下`Shift+G`再按`o`键，`vi`将在文件最后一行待命，此时就可以输入详细的commit message啦~
 
-![git_diff](../assets/images/posts/git/git_commit.png)
+![git commit 示意图](/images/git/git_commit.png)
 
 注意，commit message要注意及时换行，不要超过开头注释部分的宽度。
 
@@ -236,7 +236,7 @@ fetch操作后，远程跟踪分支就和远程代码仓库里的相应分支代
 
 出来的log是这样色儿的：
 
-![git_log](../assets/images/posts/git/git_log.jpg)
+![git log 示意图](/images/git/git_log.jpg)
 
 `git log`平时是和`git status`一样最常用的命令，毕竟强迫症，需要不断通过这两个命令找到安全感。。。
 
