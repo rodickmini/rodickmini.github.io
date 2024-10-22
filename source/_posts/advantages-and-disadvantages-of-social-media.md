@@ -1,5 +1,5 @@
 ---
-title: Advantages and disadvantages of social media
+title: Advantages and Disadvantages of Social Media
 date: 2024-10-22 14:00
 tags: [ielts, english learning]
 ---
