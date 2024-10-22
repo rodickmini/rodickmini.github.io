@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <link rel="alternate icon" type="image/png" href="/img/favicon.ico">
+  <title>
+    
+      typeof操作符 |
+     
+    David Cai
+  </title>
+  
+<link rel="stylesheet" href="/css/maoblog.css">
+
+  
+<link rel="stylesheet" href="/css/partials/post.css">
+
+  
+<link rel="stylesheet" href="/css/partials/comment.css">
+
+  
+<link rel="stylesheet" href="/css/partials/search.css">
+
+  
+<link rel="stylesheet" href="/css/partials/meta.css">
+
+  
+<link rel="stylesheet" href="/css/partials/about.css">
+
+  
+<link rel="stylesheet" href="/fontawesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/zoom.css">
+
+  
+<link rel="stylesheet" href="/css/prism.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/css/math/katex.min.css">
+
+<link rel="stylesheet" href="/css/math/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="David Cai" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div class="body-container">
+      <div class="body-main">
+        <div class="header-wrapper"><div class="header">
+  <a class="logo" href="/">David Cai</a>
+  <ul class="nav">
+    
+      
+        <li><a href="/">Posts</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a style="cursor: pointer;" onclick="openSearchBar()">Search</a></li>
+      
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+    <!-- <li class="site-mode">light</i></li> -->
+  </ul>
+</div>
+<div class="search-bar-container">  
+    <div class="search-bar">
+        <input id="search-input" value="" class="search-input" autofocus placeholder="Search something..." type="text" onblur="hideSearchBar()" oninput="exportSearchContent()">
+    </div>
+    <div class="search-output">
+        <ul class="search-output-list">
+            <!-- 结果列表 -->
+            <!-- <span style="padding-left: 3px; margin-left: 3px;">无记录</span> -->
+            <li class="Searching">
+                <div class="content">
+                    Searching...
+                </div>
+            </li>
+        </ul>
+        <span style="padding-left: 3px; margin-left: 3px; font-size: 13px;"><em>Powered by <span  onclick="goToLink(this)"><a href="/search.xml" class="search-xml li-link">search.xml</a></span></em></span>
+    </div>
+</div></div>
+        <div class="main-wrapper"><main>
+  <div class="main-container">
+      <div class="post-details">
+          
+            <div class="post-title">
+              <h1>typeof操作符</h1>
+            </div>
+          
+          <div class="post-content">
+            <blockquote>
+<p>JS中，typeof操作符返回一个字符串，表明typeof 后面操作数的类型</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// Numbers</span>
+<span class="token keyword">typeof</span> <span class="token number">37</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token number">3.14</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> Math<span class="token punctuation">.</span><span class="token constant">LN2</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token number">Infinity</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token number">NaN</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span> <span class="token comment">// 尽管NaN是"Not-A-Number"的缩写</span>
+<span class="token keyword">typeof</span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span> <span class="token comment">// 但不要使用这种形式!</span>
+
+<span class="token comment">// Strings</span>
+<span class="token keyword">typeof</span> <span class="token string">""</span> <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token string">"bla"</span> <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">;</span> <span class="token comment">// typeof总是返回一个字符串</span>
+<span class="token keyword">typeof</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">;</span> <span class="token comment">// 但不要使用这种形式!</span>
+
+<span class="token comment">// Booleans</span>
+<span class="token keyword">typeof</span> <span class="token boolean">true</span> <span class="token operator">===</span> <span class="token string">'boolean'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token boolean">false</span> <span class="token operator">===</span> <span class="token string">'boolean'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'boolean'</span><span class="token punctuation">;</span> <span class="token comment">// 但不要使用这种形式!</span>
+
+<span class="token comment">// Functions</span>
+<span class="token keyword">typeof</span> eval <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> Math<span class="token punctuation">.</span>floor <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Symbols</span>
+<span class="token keyword">typeof</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'symbol'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'symbol'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> Symbol<span class="token punctuation">.</span>iterator <span class="token operator">===</span> <span class="token string">'symbol'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Undefined</span>
+<span class="token keyword">typeof</span> <span class="token keyword">undefined</span> <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> declaredButUndefinedVariable <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> undeclaredVariable <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// Objects</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">a</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">&#125;</span> <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 区分数组,普通对象</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">typeof</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>用typeof Array 返回的类型是<code>object</code>，那么怎样区分数组和对象呢？</p>
+<h2 id="区分数组和对象"><a class="markdownIt-Anchor" href="#区分数组和对象"></a> 区分数组和对象</h2>
+<p>可以使用<code>Object.prototype.toString</code>方法。ECMA-262标准中，该方法的执行逻辑是：</p>
+<ol>
+<li>Get the [[Class]] property of this object.</li>
+<li>Compute a string value by concatenating the three strings “[object “, Result (1), and “]”.</li>
+<li>Return Result (2)</li>
+</ol>
+<p>而ECMA-262标准中对Array的描述如下：</p>
+<ol>
+<li>new Array([ item0[, item1 [,…]]])</li>
+<li>The [[Class]] property of the newly constructed object is set to “Array”.</li>
+</ol>
+<p>所以，当我们在一个数组上使用call调用<code>Object.prototype.toString</code>方法时，可以取到该数组的内部属性Class为“Array”。所以，判断一个JS对象是否为数组的逻辑如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">isArray</span><span class="token punctuation">(</span><span class="token parameter">v</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object Array]'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>测试如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 下面的函数调用都返回 true</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 鲜为人知的事实：其实 Array.prototype 也是一个数组。</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// 下面的函数调用都返回 false</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token string">'Array'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">isArray</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h2>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/YaoAzhen/archive/2010/01/27/1657696.html">http://www.cnblogs.com/YaoAzhen/archive/2010/01/27/1657696.html</a></li>
+</ol>
+<p><strong>–END–</strong></p>
+
+          </div>
+          
+            <div class="dot-line"></div>
+            <div class="post-meta">
+              <div class="post-date">
+                <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date">2016/11/22</span>
+              </div>
+              <div class="post-tags">
+                 
+                  
+                    <div class="tag-item">
+                      <a href="/tags/tech/"><i class="fa fa-tag"></i>&nbsp;&nbsp;tech</a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+          
+      </div>
+  </div>
+</main>
+
+<script src="https://giscus.app/client.js"
+        data-repo="maodaisuki/hexo-theme-maoblog"
+        data-repo-id="R_kgDOKICkkw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKICkk84CZEWg"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+<!-- 前往 https://giscus.app 获取配置代码 -->
+
+
+  
+<script src="/js/mermaid.min.js"></script>
+
+
+
+<script src="/js/zoom/jquery.min.js"></script>
+
+
+<script src="/js/zoom/bootstrap.min.js"></script>
+
+
+<script src="/js/zoom/zoom.js"></script>
+
+
+<script src="/js/maoblog.js"></script>
+
+
+<script src="/js/prism.js"></script>
+</div>
+        <div class="footer-wrapper"><footer>
+  <div class="footer-container">
+    <div class="footer-meta">
+      
+        <div class="footer-meta-copyright">
+          &copy; 2024 David Cai.
+        </div>
+      
+      
+      
+    </div>
+  </div>
+</footer>
+</div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var searchXMLPath = "https://rodickmini.github.io" + "/" + "search.xml"
+    console.log(searchXMLPath)
+  </script>
+  
+<script src="/js/search/search.js"></script>
+
+</html>
