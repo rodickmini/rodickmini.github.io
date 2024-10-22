@@ -4,3 +4,4 @@ type: "404"
 layout: "404"
 ---
 
+You are LOST
