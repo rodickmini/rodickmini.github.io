@@ -126,3 +126,8 @@ math:
         display: false
       tex:
       svg:
+
+deploy:
+  type: git
+  repo: https://github.com:rodickmini/rodickmini.github.io.git
+  branch: master  # 或 master，如果你使用的是 master 分支
