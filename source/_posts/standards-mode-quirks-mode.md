@@ -1,8 +1,7 @@
 ---
 title: 浏览器的标准模式（standards mode）和怪异模式(quirks mode)
 date: 2017-05-26 14:00
-tags:
-- tech
+tags: tech
 ---
 
 ## 什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)

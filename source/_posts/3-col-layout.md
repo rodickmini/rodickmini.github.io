@@ -1,8 +1,7 @@
 ---
 title: 左右定宽中间自适应3栏布局
 date: 2016-11-18 14:00
-tags:
-- tech
+tags: tech
 ---
 
 > 总结了4种“左右固定中间自适应的3栏布局”，强烈参考了张鑫旭的[博客](http://www.zhangxinxu.com/wordpress/2009/11/%E6%88%91%E7%86%9F%E7%9F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E4%B8%89%E6%A0%8F%E7%BD%91%E9%A1%B5%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95/)

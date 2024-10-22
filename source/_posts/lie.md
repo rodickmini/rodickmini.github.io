@@ -1,8 +1,7 @@
 ---
 title: 谎言
 date: 2016-05-12 14:00
-tags:
-- life
+tags: life
 ---
 
 

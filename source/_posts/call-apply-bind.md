@@ -1,8 +1,7 @@
 ---
 title: call apply bind简析
 date: 2016-11-17 14:00
-tags:
-- tech
+tags: tech
 ---
 
 ## Function.prototype.call()

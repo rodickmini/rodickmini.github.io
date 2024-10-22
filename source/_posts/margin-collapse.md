@@ -1,8 +1,7 @@
 ---
 title: CSS 中的外边距折叠（margin collapse）
 date: 2016-11-19 14:00
-tags:
-- tech
+tags: tech
 ---
 
 > 普通流中的两个或多个毗邻的块级元素垂直方向上的margin会折叠，实际外边距为两者margin中的较大值

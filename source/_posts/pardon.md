@@ -1,8 +1,7 @@
 ---
 title: 包容
 date: 2016-04-15 14:00
-tags:
-- life
+tags: life
 ---
 
 你可以开车到处游玩

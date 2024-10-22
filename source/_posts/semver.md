@@ -1,8 +1,7 @@
 ---
 title: 语义化版本号（semver）解析
 date: 2016-10-10 14:00
-tags:
-- tech
+tags: tech
 ---
 
 ## 摘要

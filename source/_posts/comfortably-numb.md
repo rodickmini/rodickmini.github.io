@@ -1,9 +1,7 @@
 ---
 title: Comfortably numb
 date: 2016-04-14 14:00
-tags:
-- life
-- music
+tags: [life, music]
 ---
 
 Hello.

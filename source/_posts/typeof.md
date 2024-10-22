@@ -1,8 +1,7 @@
 ---
 title: typeof操作符
 date: 2016-11-22 14:00
-tags:
-- tech
+tags: tech
 ---
 
 > JS中，typeof操作符返回一个字符串，表明typeof 后面操作数的类型

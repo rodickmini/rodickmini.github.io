@@ -1,8 +1,7 @@
 ---
 title: javascript this 详解
 date: 2017-05-28 14:00
-tags:
-- tech
+tags: tech
 ---
 
 *全局作用域中的this永远为global对象，在浏览器环境下即为window对象。*

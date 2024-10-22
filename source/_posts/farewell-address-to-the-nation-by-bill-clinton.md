@@ -1,8 +1,7 @@
 ---
 title: Farewell Address to the Nation by Bill Clinton
 date: 2024-10-22 12:00
-tags:
-- speech
+tags: speech
 ---
 
 >This address was delivered on January 18, 2001

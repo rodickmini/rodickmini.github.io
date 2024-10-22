@@ -1,8 +1,7 @@
 ---
 title: Wish you were here
 date: 2016-04-14 14:00
-tags:
-- life
+tags: life
 ---
 
 So

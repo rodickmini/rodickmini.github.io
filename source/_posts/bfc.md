@@ -1,8 +1,7 @@
 ---
 title: CSS Block Formatting Context(BFC)详解
 date: 2016-11-21 14:00
-tags:
-- tech
+tags: tech
 ---
 
 > Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.

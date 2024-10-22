@@ -1,9 +1,7 @@
 ---
 title: How to Claim Your Leadership Power | Michael Timms | TED
 date: 2024-10-17 14:00
-tags:
-- speech
-- self improvement
+tags: [speech, self improvement]
 ---
 
 Source video URL: [https://www.youtube.com/watch?v=dIYmzf21d1g](https://www.youtube.com/watch?v=dIYmzf21d1g)

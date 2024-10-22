@@ -1,8 +1,7 @@
 ---
 title: Git最常用的n个操作
 date: 2016-10-22 14:00
-tags:
-- tech
+tags: tech
 ---
 
 ![git_draft](../assets/images/posts/git/git_draft.jpg)
