@@ -18,3 +18,31 @@ Additionally, social media has become a powerful tool for <mark>activism</mark> 
 Of course, there are alse some negative aspects of social media. It can be addictive and time-consuming, leading to <mark>procrastination</mark> and distraction. It can <mark>foster</mark> a culture of <mark>envy</mark> and comparison, as we see others' highlight <mark>reels</mark> on social media and feel <mark>inadequate</mark> in comparison. It can also lead to misinformation and spread fake news.
 
 However, I believe that the advantages of social media outweigh the disadvantages. It can help us stay connected, informed, and <mark>engaged</mark> with the world around us. As long as we use it responsibly and <mark>critically</mark>, social media can be a powerful tool for positive change and personal growth.
+
+<div id="marked-list">
+  <h1>Marked</h1>
+</div>
+
+<script>
+  (function() {
+    const markedEl = document.querySelectorAll('mark');
+    const ul = document.createElement('ul');
+
+    const uniqueTexts = new Set();
+
+    markedEl.forEach(el => {
+      const text = el.textContent;
+
+      if (!uniqueTexts.has(text)) {
+        uniqueTexts.add(text);
+        
+        const li = document.createElement('li');
+        li.textContent = text;
+        
+        ul.appendChild(li);
+      }
+    });
+    
+    document.getElementById('marked-list').appendChild(ul);
+  })();
+</script>
