@@ -70,6 +70,7 @@ B.S. in Computer Science and Technology, 2007 - 2011
 
 # Blogs
 
+- [2024-10-22 Advantages and Disadvantages of Social Medias.md](./blogs/2024-10-22-advantages-and-disadvantages-of-social-medias.md)
 - [2024-10-22 Farewell Address to the Nation by Bill Clinton](./blogs/2024-10-22-farewell-address-to-the-nation-by-bill-clinton.md)
 - [2024-10-18 How to Improve Spoken English](./blogs/2024-10-18-how-to-improve-spoken-english.md)
 - [2024-10-17 How to Claim Your Leadership Power](./blogs/2024-10-17-how-to-claim-your-leadership-power.md)
