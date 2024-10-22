@@ -7,7 +7,7 @@ tags: [ielts, english learning]
 >
 > Nowadays many people use social media every day to keep in touch with others and news events. Do you think the advantages outweigh the disadvantages? Write an essay with no less than 250 words.
 
-In today's world, social media has become an <mark>indispensable</mark> part of our lives. It helps us stay connected with our family and friends, share our thoughts, experiences and opinions, and keep us with the latest news and current events. However, there are also some downsides <mark>to</mark> social media. In this essay, I will argue that the advantages outweigh the disadvantages.
+In today's world, social media has become an <mark>indispensable</mark> part of our lives. It helps us stay connected with our family and friends, share our thoughts, experiences and opinions, and keep us with the latest news and current events. However, there are also some downsides to social media. In this essay, I will argue that the advantages outweigh the disadvantages.
 
 One of the greatest benefits of social media is that it offers us a sense of community. We can join groups or communities of like-minded people, share our interests and passions with them, and engage in conversations and discussions. This can help us feel less isolated and more connected to others, particularly during times of social distancing and <mark>quarantine</mark>.
 
