@@ -44,8 +44,8 @@ Thank you. God bless you, and God bless America.
 
 *NOTE: The President spoke at 8 p.m. from the Oval Office at the White House.*
 
-<div id="word-list">
-  <h1>Vocabulary List</h1>
+<div id="marked-list">
+  <h1>Marked</h1>
 </div>
 
 <script>
@@ -68,7 +68,7 @@ Thank you. God bless you, and God bless America.
       }
     });
     
-    document.getElementById('word-list').appendChild(ul);
+    document.getElementById('marked-list').appendChild(ul);
   })();
 </script>
 
