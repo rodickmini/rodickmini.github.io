@@ -10,7 +10,7 @@ layout: "about"
 >
 > Wechat: nanjingcaiyou
 >
->Nanjing, Jiangsu, China
+> Nanjing, Jiangsu, China
 
 # PROFESSIONAL EXPERIENCE
 
