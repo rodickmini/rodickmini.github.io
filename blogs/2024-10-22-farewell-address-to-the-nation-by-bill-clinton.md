@@ -44,4 +44,28 @@ Thank you. God bless you, and God bless America.
 
 *NOTE: The President spoke at 8 p.m. from the Oval Office at the White House.*
 
+<script>
+  (function() {
+    const markedEl = document.querySelectorAll('mark');
+    const ul = document.createElement('ul');
+
+    const uniqueTexts = new Set();
+
+    markedEl.forEach(el => {
+      const text = el.textContent;
+
+      if (!uniqueTexts.has(text)) {
+        uniqueTexts.add(text);
+        
+        const li = document.createElement('li');
+        li.textContent = text;
+        
+        ul.appendChild(li);
+      }
+    });
+    
+    document.body.appendChild(ul);
+  })();
+</script>
+
 
