@@ -33,7 +33,6 @@
 }
 .about-info p {
   margin-block: 0;
-  font-weight: lighter;
   line-height: 1.6em;
 }
 .about-info p:not(:last-child) {
