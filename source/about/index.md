@@ -8,6 +8,8 @@ layout: "about"
 > 
 > <a href="mailto:rodickcai@gmail.com">rodickcai@gmail.com</a>
 >
+> Wechat ID: nanjingcaiyou
+>
 >Nanjing, Jiangsu, China
 
 # PROFESSIONAL EXPERIENCE
