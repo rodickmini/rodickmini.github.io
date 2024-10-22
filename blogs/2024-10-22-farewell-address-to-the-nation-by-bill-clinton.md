@@ -2,14 +2,9 @@
 
 Date: October 22, 2024
 
-```
-
-William J. Clinton 42nd President of the United States: 1993 - 2001
-
-This address was delivered on January 18, 2001
-
-William J. Clinton, Farewell Address to the Nation Online by Gerhard Peters and John T. Woolley, The American Presidency Project [https://www.presidency.ucsb.edu/node/227701](https://www.presidency.ucsb.edu/node/227701)
-```
+>This address was delivered on January 18, 2001
+> 
+> William J. Clinton (42nd President of the United States: 1993 - 2001), Farewell Address to the Nation Online by Gerhard Peters and John T. Woolley, The American Presidency Project [https://www.presidency.ucsb.edu/node/227701](https://www.presidency.ucsb.edu/node/227701)
 
 My fellow citizens, tonight is my last opportunity to speak to you from the Oval Office as your President. I am profoundly grateful to you for twice giving me the honor to serve, to work for you and with you to prepare our Nation for the 21st century.
 
