@@ -9,4 +9,4 @@ tags:
 >
 > Nowadays many people use social media every day to keep in touch with others and news events. Do you think the advantages outweigh the disadvantages? Write an essay with no less than 250 words.
 
-In today's world, ...
+In today's world, social media has become an indispensable part of 
