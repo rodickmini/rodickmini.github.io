@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <link rel="alternate icon" type="image/png" href="/img/favicon.ico">
+  <title>
+    
+      javascript this 详解 |
+     
+    David Cai
+  </title>
+  
+<link rel="stylesheet" href="/css/maoblog.css">
+
+  
+<link rel="stylesheet" href="/css/partials/post.css">
+
+  
+<link rel="stylesheet" href="/css/partials/comment.css">
+
+  
+<link rel="stylesheet" href="/css/partials/search.css">
+
+  
+<link rel="stylesheet" href="/css/partials/meta.css">
+
+  
+<link rel="stylesheet" href="/css/partials/about.css">
+
+  
+<link rel="stylesheet" href="/fontawesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/css/zoom.css">
+
+  
+<link rel="stylesheet" href="/css/prism.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/css/math/katex.min.css">
+
+<link rel="stylesheet" href="/css/math/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="David Cai" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div class="body-container">
+      <div class="body-main">
+        <div class="header-wrapper"><div class="header">
+  <a class="logo" href="/">David Cai</a>
+  <ul class="nav">
+    
+      
+        <li><a href="/">Posts</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a style="cursor: pointer;" onclick="openSearchBar()">Search</a></li>
+      
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+    <!-- <li class="site-mode">light</i></li> -->
+  </ul>
+</div>
+<div class="search-bar-container">  
+    <div class="search-bar">
+        <input id="search-input" value="" class="search-input" autofocus placeholder="Search something..." type="text" onblur="hideSearchBar()" oninput="exportSearchContent()">
+    </div>
+    <div class="search-output">
+        <ul class="search-output-list">
+            <!-- 结果列表 -->
+            <!-- <span style="padding-left: 3px; margin-left: 3px;">无记录</span> -->
+            <li class="Searching">
+                <div class="content">
+                    Searching...
+                </div>
+            </li>
+        </ul>
+        <span style="padding-left: 3px; margin-left: 3px; font-size: 13px;"><em>Powered by <span  onclick="goToLink(this)"><a href="/search.xml" class="search-xml li-link">search.xml</a></span></em></span>
+    </div>
+</div></div>
+        <div class="main-wrapper"><main>
+  <div class="main-container">
+      <div class="post-details">
+          
+            <div class="post-title">
+              <h1>javascript this 详解</h1>
+            </div>
+          
+          <div class="post-content">
+            <p><em>全局作用域中的this永远为global对象，在浏览器环境下即为window对象。</em></p>
+<p>函数中的this根据函数的不同调用方式分下列4中情况：</p>
+<h2 id="1-直接调用function-invocation-pattern"><a class="markdownIt-Anchor" href="#1-直接调用function-invocation-pattern"></a> 1、直接调用（Function Invocation Pattern）</h2>
+<p>例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 输出：window</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意，此时的 <code>foo</code> 是作为单独的变量出现的，而不是对象的属性。</p>
+<p>在这种模式下，函数中的this永远是global对象，在浏览器环境下即window对象。</p>
+<h2 id="2-作为方法调用method-invocation-pattern"><a class="markdownIt-Anchor" href="#2-作为方法调用method-invocation-pattern"></a> 2、作为方法调用（Method Invocation Pattern）</h2>
+<p>示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'papi'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">say</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+obj<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 输出：obj</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这种情况下函数作为对象的属性被调用，就必然会运用到 <code>.</code> 操作符或者 <code>[]</code>操作符，这种情况下，函数中的 <code>this</code> 等于 <code>.</code> 或 <code>[</code> 前面的那个对象，上面的例子中即为obj。 <code>obj['say']()</code> 这种调用方式输出的 <code>this</code> 也是 obj。</p>
+<p>看下面一个例子：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> length <span class="token operator">=</span> <span class="token number">100</span>
+    
+<span class="token keyword">function</span> <span class="token function">func</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">func</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+o<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>执行 <code>o.add</code> 方法并把全局变量 <code>func</code> 作为参数传入。</p>
+<p>在 <code>add</code> 方法内部执行传进来的 <code>func</code> 函数，这种调用属于函数直接调用，是上述第1种情况，因此函数中的 <code>this</code> 指向 <code>window</code>，<code>window.length</code>即全局变量 <code>length</code>，值为100。</p>
+<p><code>arguments[0]()</code> 这一条语句是取到了函数的第一个参数（显然是 <code>func</code> 函数）并执行，这种调用方式等效于 <code>func()</code> 这种调用方式？答案是否定的！众所周知，函数中的 <code>arguments</code> 是一个类数组对象，它具有 <code>length</code> 属性，其值为参数的个数，上例中只传入了一个参数，因此 <code>arguments.length === 1</code>，深入 <code>arguments</code> 对象，展开大体是以下结构：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  <span class="token number">0</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">func</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">'length'</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>因此，<code>arguments[0]()</code> 这种调用方式其实是调用了arguments对象的 <code>0</code> 方法！而这个所谓的 <code>0</code> 方法从何而来呢？就是通过将 <code>func</code> 函数复制给它得来的。因此，方法中的 <code>this</code> 应该指向 <code>arguments</code> 对象，因此输出 1。</p>
+<p>如果执行 <code>o.add(func, 'hahaha')</code> 呢？没错，输出2，因为此时 <code>arguments.length === 2</code>。</p>
+<h2 id="3-作为构造函数调用constructor-pattern"><a class="markdownIt-Anchor" href="#3-作为构造函数调用constructor-pattern"></a> 3、作为构造函数调用（Constructor Pattern）</h2>
+<p>在 <code>new Foo()</code> 这种调用方式下，<code>Foo</code> 内部的 <code>this</code> 永远指向 <code>new</code> 操作符返回的对象</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Book</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token string">'百年孤独'</span><span class="token punctuation">)</span> <span class="token comment">// 输出 &#123;name: '百年孤独'&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="4-apply调用apply-pattern"><a class="markdownIt-Anchor" href="#4-apply调用apply-pattern"></a> 4、apply调用（Apply Pattern）</h2>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">var</span> mao <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'mao'</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>mao<span class="token punctuation">)</span>       <span class="token comment">// 输出 &#123;name: 'mao'&#125;</span>
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>mao<span class="token punctuation">)</span>      <span class="token comment">// 输出 &#123;name: 'mao'&#125;</span>
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>mao<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">// 输出 &#123;name: 'mao'&#125;</span>
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          <span class="token comment">// 输出 window</span>
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>      <span class="token comment">// 输出 window</span>
+<span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token comment">// 输出 window</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>函数的 <code>call</code>、 <code>apply</code> 、 <code>bind</code> 方法的第一个参数就是指定函数中 <code>this</code> 值的，如果不传参或传入 <code>null</code> 或 <code>undefined</code> 则将函数中的 <code>this</code> 指向global，在浏览器环境下即为 window对象。</p>
+<h2 id="5-es6箭头函数中的this"><a class="markdownIt-Anchor" href="#5-es6箭头函数中的this"></a> 5、ES6箭头函数中的this</h2>
+<p>ES6的箭头函数中的 <code>this</code> 与ES5中的 <code>this</code> 行为不一样，箭头函数中的 <code>this</code> 值是在函数定义时就决定的，它不会随着运行时的上下文不同发生改变。</p>
+<p>例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">printThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> <span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">printThis</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token function">printThis</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>根据第一种情形，上述代码两次调用均输出 <code>window</code>，如果把 <code>print</code> 函数定义为箭头函数，则 <code>print</code> 函数内部的 <code>this</code> 值会在定义 <code>print</code> 函数时决定，示例如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">printThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> <span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">printThis</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [1]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上例中， <code>printThis.call([1])</code> 调用 <code>printThis</code> 函数时将其内部的 <code>this</code> 值设为 <code>[1]</code>。</p>
+<p>在 <code>printThis</code> 函数内部定义了一个箭头函数 <code>print</code>，箭头函数中的 <code>this</code>，就是其外层函数 <code>printThis</code> 的 <code>this</code>，也就是 <code>[1]</code>。</p>
+<p>随后， <code>print()</code> 语句执行刚刚定义的函数，因此输出 <code>[1]</code>。</p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p>弄清楚以上5种JS函数的调用方式，函数中 <code>this</code> 的指向就很清楚了。</p>
+<p><strong>–END–</strong></p>
+
+          </div>
+          
+            <div class="dot-line"></div>
+            <div class="post-meta">
+              <div class="post-date">
+                <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date">2017/05/28</span>
+              </div>
+              <div class="post-tags">
+                 
+                  
+                    <div class="tag-item">
+                      <a href="/tags/tech/"><i class="fa fa-tag"></i>&nbsp;&nbsp;tech</a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+          
+      </div>
+  </div>
+</main>
+
+<script src="https://giscus.app/client.js"
+        data-repo="maodaisuki/hexo-theme-maoblog"
+        data-repo-id="R_kgDOKICkkw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKICkk84CZEWg"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+<!-- 前往 https://giscus.app 获取配置代码 -->
+
+
+  
+<script src="/js/mermaid.min.js"></script>
+
+
+
+<script src="/js/zoom/jquery.min.js"></script>
+
+
+<script src="/js/zoom/bootstrap.min.js"></script>
+
+
+<script src="/js/zoom/zoom.js"></script>
+
+
+<script src="/js/maoblog.js"></script>
+
+
+<script src="/js/prism.js"></script>
+</div>
+        <div class="footer-wrapper"><footer>
+  <div class="footer-container">
+    <div class="footer-meta">
+      
+        <div class="footer-meta-copyright">
+          &copy; 2024 David Cai.
+        </div>
+      
+      
+      
+    </div>
+  </div>
+</footer>
+</div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var searchXMLPath = "https://rodickmini.github.io" + "/" + "search.xml"
+    console.log(searchXMLPath)
+  </script>
+  
+<script src="/js/search/search.js"></script>
+
+</html>
