@@ -1,6 +1,8 @@
-_site
-__pycache__
 .DS_Store
-.sass-cache
-.jekyll-metadata
+Thumbs.db
+db.json
+*.log
 node_modules/
+public/
+.deploy*/
+_config - 副本.yml
