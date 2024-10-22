@@ -130,4 +130,4 @@ math:
 deploy:
   type: git
   repo: git@github.com:rodickmini/rodickmini.github.io.git
-  branch: master  # 或 master，如果你使用的是 master 分支
+  branch: gh-pages
