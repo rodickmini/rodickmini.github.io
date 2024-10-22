@@ -4,7 +4,7 @@
 
 > Cai You (David)
 > 
->rodickcai@gmail.com
+> <a href="mailto:rodickcai@gmail.com">rodickcai@gmail.com</a>
 >
 >Nanjing, Jiangsu, China
 
