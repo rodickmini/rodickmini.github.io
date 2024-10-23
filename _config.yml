@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: David Cai's blog
+title: "David Cai's blog"
 subtitle: "A Blog into Web Development, Product Manage and English Learning"
 description: "This is a personal blog focused on Web Development, Product Manage and English Learning."
 keywords: "Cai You, David Cai, Computer Science, Front-End, Product, English Learning, IELTS, BUPT, Beijing University of Posts and Telecommunications"
-author: David Cai
-language: en
-timezone: ''
+author: "David Cai"
+language: "en"
+timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
