@@ -10,7 +10,7 @@
   --evenbg: #fff;
   --archive-date-color: #666;
   --archive-title-color: #000;
-  --archive-title-color-hover: #4a4cd4;
+  --archive-title-color-hover: #0084ff;
 }
 body {
   font-family: "Montserrat", "SF UI Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -58,7 +58,9 @@ a {
   margin-bottom: 16px;
   flex: 0 0 100%;
 }
-.nav {
+ul.nav {
+  list-style: none;
+  padding-inline-start: 0;
   margin: 0 0 4px;
   flex: 0 0 100%;
   display: flex;
@@ -66,10 +68,6 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
-}
-ul {
-  list-style: none;
-  padding-inline-start: 0;
 }
 .nav li {
   padding: 2px 0;

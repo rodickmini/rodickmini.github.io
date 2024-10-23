@@ -6,6 +6,10 @@
   font-size: 13px;
   margin: 3px 0;
 }
+.post-date a {
+  color: #0084ff;
+  font-weight: bold;
+}
 .post-tags {
   font-size: 13px;
   margin-bottom: 3px;
