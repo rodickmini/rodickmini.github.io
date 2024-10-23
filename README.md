@@ -1,4 +1,5 @@
-# David (Cai You)'s Personal Website
+# David (Cai You)'s Blog
+
 ## Introduction
 My name is David (Cai You).
 
