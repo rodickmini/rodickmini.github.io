@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: David Cai
-subtitle: David Cai's blog
-description: David Cai's blog
-keywords:
+title: David Cai's blog
+subtitle: "A Blog into Web Development, Product Manage and English Learning"
+description: "This is a personal blog focused on Web Development, Product Manage and English Learning."
+keywords: "Cai You, David Cai, Computer Science, Front-End, Product, English Learning, IELTS, BUPT, Beijing University of Posts and Telecommunications"
 author: David Cai
 language: en
 timezone: ''
