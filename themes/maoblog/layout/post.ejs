@@ -5,6 +5,9 @@
             <div class="post-title">
               <h1><%= page.title %></h1>
             </div>
+            <div class="post-date">
+              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span class="post-date"><%= date(page.date, 'YYYY/MM/DD HH:mm') %></span> by <a class="post-author" href="/about"><%= config.author %></a>
+            </div>
           <% } %>
           <div class="post-content">
             <%- page.content %>
@@ -12,9 +15,6 @@
           <% if(theme.meta.enable) {%>
             <div class="dot-line"></div>
             <div class="post-meta">
-              <div class="post-date">
-                <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date"><%= date(page.date, 'YYYY/MM/DD') %></span>
-              </div>
               <div class="post-tags">
                 <% if(page.tags.length == 0) { %>
                   <div class="tag-item">
