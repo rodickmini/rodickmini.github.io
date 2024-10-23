@@ -14,7 +14,7 @@ You can reach me at [rodickcai@gmail.com](mailto:rodickcai@gmail.com)
 
 ## TODO
 
-[] 文章列表移动端适配
+[] 文章列表移动端适配，移除ul left padding
 
 
 
