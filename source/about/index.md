@@ -6,7 +6,7 @@ layout: "about"
 
 > David (Cai You)
 > 
-> <a href="mailto:rodickcai@gmail.com">rodickcai@gmail.com</a>
+> <rodickcai@gmail.com>
 >
 > Wechat: nanjingcaiyou
 >
