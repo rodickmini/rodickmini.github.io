@@ -6,10 +6,10 @@
               <h1><%= page.title %></h1>
             </div>
             <div class="post-date">
-              <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date"><%= date(page.date, 'YYYY/MM/DD HH:mm') %></span> by <a class="post-author" href="/about"><%= config.author %></a>
+              <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date"><%= date(page.date, 'MMM. DD, YYYY') %></span> · <a class="post-author" href="/about"><%= config.author %></a>
             </div>
             <div class="post-date">
-              <i class="fa fa-pencil"></i>&nbsp;&nbsp;<span>Word Count: <%= countWords(page.content) %></span>&nbsp;&nbsp;<i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span class="reading-time">Est. Rd. Time: <%= readingTime(page.content) %> min</span>
+              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span><%= countWords(page.content) %> words</span> · <span class="reading-time"><%= readingTime(page.content) %> min read</span>
             </div>
             <div class="dot-line"></div>
           <% } %>

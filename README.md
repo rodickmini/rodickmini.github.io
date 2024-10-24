@@ -19,7 +19,7 @@ You can reach me at [rodickcai@gmail.com](mailto:rodickcai@gmail.com)
 ## TODO
 
 - [ ] 文章列表移动端适配，移除ul left padding
-- [ ] read word 参考 medium
+- [x] read word 参考 medium
 
 
 
