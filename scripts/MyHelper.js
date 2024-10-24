@@ -26,6 +26,15 @@ hexo.extend.helper.register('readingTime', function(content) {
   return readingTimeMinutes;
 });
 
+// scripts/highlightSyntax.js
+hexo.extend.filter.register('before_post_render', function(data){
+  // 用正则表达式匹配并替换 ==new word== 语法为 <mark>new word</mark>
+  data.content = data.content.replace(/==([^==]+)==/g, function(match, p1){
+    return `<mark>${p1}</mark>`;
+  });
+  return data;
+});
+
 hexo.extend.helper.register('extractHighlighted', function(content) {
   // Use a regular expression to find all <mark> tags and extract their content
   const matches = content.match(/<mark>(.*?)<\/mark>/g);
