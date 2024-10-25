@@ -124,14 +124,16 @@
 </blockquote>
 <p>好了，我现在来做阅读理解（敲黑板）：</p>
 <p>BFC的规范总共有3段，第1段说粗了BFC产生的条件，第2、3两端主要解释了BFC内部盒子的排列行为。</p>
-<h2 id="产生条件"><a href="#产生条件" class="headerlink" title="产生条件"></a>产生条件</h2><ol>
+<h2 id="产生条件"><a class="markdownIt-Anchor" href="#产生条件"></a> 产生条件</h2>
+<ol>
 <li>根元素（html）</li>
 <li>float不为<code>none</code></li>
 <li>position为<code>absolute</code>或<code>fixed</code></li>
 <li>display为<code>inline-block</code>、<code>table-cell</code>或<code>table-caption</code>等</li>
 <li>display为<code>block</code> &amp;&amp; overflow不为<code>visible</code></li>
 </ol>
-<h2 id="BFC内部-盒子的布局行为"><a href="#BFC内部-盒子的布局行为" class="headerlink" title="BFC内部 盒子的布局行为"></a>BFC内部 盒子的布局行为</h2><ol>
+<h2 id="bfc内部-盒子的布局行为"><a class="markdownIt-Anchor" href="#bfc内部-盒子的布局行为"></a> BFC内部 盒子的布局行为</h2>
+<ol>
 <li>盒子从父元素的顶部开始一个接一个垂直排列</li>
 <li>兄弟盒子之间垂直方向的距离由<code>margin</code>属性的值决定，毗邻的块级盒子之间垂直方向的<code>margin</code>会合并</li>
 <li>每个盒子的左边沿和父元素的左边沿紧贴（对于从右到左的格式化，右边沿紧贴），浮动的盒子也是如此</li>
@@ -144,7 +146,9 @@
 </blockquote>
 <p>这句话经过实验总结出来的，有可能会有问题，关键点是<code>due to the floats</code>这句话写的太笼统了，如何<strong>due</strong>?!</p>
 <p>第5点是参考别人的博客和实验所得，也就是说触发父元素的BFC可以清除浮动~</p>
-<h2 id="BFC的作用"><a href="#BFC的作用" class="headerlink" title="BFC的作用"></a>BFC的作用</h2><h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p><strong>问：为什么要清除浮动？</strong></p>
+<h2 id="bfc的作用"><a class="markdownIt-Anchor" href="#bfc的作用"></a> BFC的作用</h2>
+<h3 id="清除浮动"><a class="markdownIt-Anchor" href="#清除浮动"></a> 清除浮动</h3>
+<p><strong>问：为什么要清除浮动？</strong></p>
 <p><em>答：当普通流中的子元素<code>float</code>值不为<code>none</code>，该子元素不会将父元素高度“撑开”，导致父元素的高度坍塌，而这在很多情况下不是我们希望的</em></p>
 <p>例如：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -164,7 +168,7 @@
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下图：</p>
-<p><img src="/images/bfc/bfc-clearfix.png" alt="bfc clear示意图"></p>
+<p><img src="/images/bfc/bfc-clearfix.png" alt="bfc clear示意图" /></p>
 <p>此时，触发父元素的BFC，由于上述行为5：BFC计算高度时会包含其中的浮动元素，父元素的高度会包含两个浮动的子元素，高度即被“撑开”了，代码如下：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -183,10 +187,10 @@
   <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>效果如下图：</p>
-<p><img src="/images/bfc/bfc-clearfix-1.png" alt="bfc clear 示意图"></p>
-<h3 id="左右定宽，中间自适应布局"><a href="#左右定宽，中间自适应布局" class="headerlink" title="左右定宽，中间自适应布局"></a>左右定宽，中间自适应布局</h3><p>下面这段代码：</p>
+<p><img src="/images/bfc/bfc-clearfix-1.png" alt="bfc clear 示意图" /></p>
+<h3 id="左右定宽中间自适应布局"><a class="markdownIt-Anchor" href="#左右定宽中间自适应布局"></a> 左右定宽，中间自适应布局</h3>
+<p>下面这段代码：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>left float-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>right float-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -208,19 +212,18 @@
   <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>根据行为3，会产生以下效果：</p>
-<p><img src="/images/bfc/bfc-default-layout.png" alt="bfc default layout 示意图"></p>
+<p><img src="/images/bfc/bfc-default-layout.png" alt="bfc default layout 示意图" /></p>
 <p>如果触发中间box的BFC，比如做以下设置：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">.mid &#123;
   height: 120px;
   background-color: blue;
   overflow: hidden;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>根据行为4，会产生以下效果：</p>
-<p><img src="/images/bfc/bfc-fluid-layout.png" alt="bfc fluid layout 示意图"></p>
-<h3 id="解决外边距折叠"><a href="#解决外边距折叠" class="headerlink" title="解决外边距折叠"></a>解决外边距折叠</h3><blockquote>
+<p><img src="/images/bfc/bfc-fluid-layout.png" alt="bfc fluid layout 示意图" /></p>
+<h3 id="解决外边距折叠"><a class="markdownIt-Anchor" href="#解决外边距折叠"></a> 解决外边距折叠</h3>
+<blockquote>
 <p>同一个BFC中，毗邻的块级盒子之间垂直方向的<code>margin</code>会合并</p>
 </blockquote>
 <p>例如以下代码：</p>
@@ -233,9 +236,8 @@
   <span class="token property">background-color</span><span class="token punctuation">:</span> cyan<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>产生了如下效果：</p>
-<p><img src="/images/bfc/margin-collapse.png" alt="margin collapse 示意图"></p>
+<p><img src="/images/bfc/margin-collapse.png" alt="margin collapse 示意图" /></p>
 <p>此时，如果把其中一个<code>.box</code>用一个BFC包裹起来，或者干脆把两个<code>.box</code>分别用BFC包裹起来，则可避免外边距折叠，代码如下：</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -251,10 +253,10 @@
   <span class="token property">background-color</span><span class="token punctuation">:</span> cyan<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>效果如下：</p>
-<p><img src="/images/bfc/margin-not-collapse.png" alt="margin collapse 示意图"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p><img src="/images/bfc/margin-not-collapse.png" alt="margin collapse 示意图" /></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<blockquote>
 <p>BFC就是页面上一个独立容器，其中的子元素的布局不会影响到其外部元素，外部元素的布局也不会影响到BFC内部的元素</p>
 </blockquote>
 <ul>

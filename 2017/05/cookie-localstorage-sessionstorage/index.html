@@ -106,16 +106,18 @@
               <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date">May. 26, 2017</span> · <a class="post-author" href="/about">David Cai</a>
             </div>
             <div class="post-date">
-              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span>305 words</span> · <span class="reading-time">2 min read</span>
+              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span>304 words</span> · <span class="reading-time">2 min read</span>
             </div>
             <div class="dot-line"></div>
           
           <div class="post-content">
-            <h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h2><p>都存储在浏览器端，都是同源（domain）的。</p>
-<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><ol>
+            <h2 id="相同点"><a class="markdownIt-Anchor" href="#相同点"></a> 相同点</h2>
+<p>都存储在浏览器端，都是同源（domain）的。</p>
+<h2 id="不同点"><a class="markdownIt-Anchor" href="#不同点"></a> 不同点</h2>
+<ol>
 <li>cookie会自动被HTTP请求头携带，可以被服务器端设置；localStorage和sessionStorage不会被HTTP请求头自动携带，服务器端无法设置localStorage和sessionStorage。</li>
 <li>cookie容量只有4K，由于浏览器每次请求会自动携带cookie，因此cookie中存放的数据不宜过大；localStorage和sessionStorage的容量通常可达5M（不同浏览器具体实现有差异）。</li>
-<li>JS原生对cookie操作的支持不够，操作起来比较麻烦；HTML 5对localStorage和sessionStorage的原生支持比较完善，操作起来比较方便。直接使用window.localStorage.xxx &#x3D; xxx 或 window.localStorage.setItem(‘xxx’, xxx)即可赋值，使用window.localStorage.xxx 或 window.localStorage.getItem(‘xxx’)即可取值。</li>
+<li>JS原生对cookie操作的支持不够，操作起来比较麻烦；HTML 5对localStorage和sessionStorage的原生支持比较完善，操作起来比较方便。<a target="_blank" rel="noopener" href="http://xn--window-vt9in98k266am0d.localStorage.xxx">直接使用window.localStorage.xxx</a> = xxx 或 window.localStorage.setItem(‘xxx’, xxx)即可赋值，<a target="_blank" rel="noopener" href="http://xn--window-vt9i248w.localStorage.xxx">使用window.localStorage.xxx</a> 或 window.localStorage.getItem(‘xxx’)即可取值。</li>
 <li>数据有效期不同：cookie在过期时间之前都有效，到了过期时间即被销毁；localStorage会一直有效，除非人工手动清除数据；sessionStorage只在当前会话有效，用户关闭标签页或窗口后即清除。</li>
 <li>作用域不同：cookie和localStorage在同源窗口中共享，sessionStorage只对当前会话页生效，不同标签页或窗口之间无法共享。</li>
 </ol>

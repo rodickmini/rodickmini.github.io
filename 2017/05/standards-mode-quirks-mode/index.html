@@ -111,11 +111,13 @@
             <div class="dot-line"></div>
           
           <div class="post-content">
-            <h2 id="什么是浏览器的标准模式（standards-mode）和怪异模式-quirks-mode"><a href="#什么是浏览器的标准模式（standards-mode）和怪异模式-quirks-mode" class="headerlink" title="什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)"></a>什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)</h2><blockquote>
+            <h2 id="什么是浏览器的标准模式standards-mode和怪异模式quirks-mode"><a class="markdownIt-Anchor" href="#什么是浏览器的标准模式standards-mode和怪异模式quirks-mode"></a> 什么是浏览器的标准模式（standards mode）和怪异模式(quirks mode)</h2>
+<blockquote>
 <p>在web发展的早期，W3C标准尚未出台，不同浏览器对html的解析标准不一致，网页开发者为了能让自己的网页在这些上古浏览器上得到正常的渲染，都遵循它们私有的标准进行不同的开发。</p>
 <p>W3C标准出台后，浏览器厂商对最新标准进行支持的同时，为了让那些遵循上古标准开发的网站依然能够正常渲染，会启用所谓的“怪异模式”对它们进行解析。</p>
 </blockquote>
-<h1 id="浏览器如何决定使用哪种模式解析？"><a href="#浏览器如何决定使用哪种模式解析？" class="headerlink" title="浏览器如何决定使用哪种模式解析？"></a>浏览器如何决定使用哪种模式解析？</h1><p>浏览器解析HTML时，如果该HTML以 <code>&lt;!DOCTYPE html&gt;</code> 开头，则对该html使用标准模式解析，其它类型的更复杂的DOCTYPE有可能会触发浏览器使用怪异模式对其进行解析。</p>
+<h1 id="浏览器如何决定使用哪种模式解析"><a class="markdownIt-Anchor" href="#浏览器如何决定使用哪种模式解析"></a> 浏览器如何决定使用哪种模式解析？</h1>
+<p>浏览器解析HTML时，如果该HTML以 <code>&lt;!DOCTYPE html&gt;</code> 开头，则对该html使用标准模式解析，其它类型的更复杂的DOCTYPE有可能会触发浏览器使用怪异模式对其进行解析。</p>
 <p>而且，要确保 <code>&lt;!DOCTYPE html&gt;</code> 在文档最前面，之前没有注释或XML声明。</p>
 <p>在 HTML5中，DOCTYPE 唯一的作用是启用标准模式。</p>
 
