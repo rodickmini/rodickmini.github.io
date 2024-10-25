@@ -18,4 +18,4 @@ And the **THIRD STEP** is the most important. As you find that you are very hard
 
 The whole point of meditation if not to feel some specific way, to stop thinking or to clear your mind. The point is to become familiar with how wild your brain is so that the chaos in your mind doesn't own you as much.
 
-It's such a radical notion that we can have a different relationship to our thoughts and emotions. And meditation is a great way to learn how to get comfortable with our inner ==meteorology==, our inner storms, so that they don't own us as much.
+It's such a ==radical notion== that we can have a different relationship to our thoughts and emotions. And meditation is a great way to learn how to get comfortable with our inner ==meteorology==, our inner storms, so that they don't own us as much.
