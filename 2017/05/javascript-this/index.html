@@ -106,24 +106,23 @@
               <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date">May. 28, 2017</span> · <a class="post-author" href="/about">David Cai</a>
             </div>
             <div class="post-date">
-              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span>1003 words</span> · <span class="reading-time">6 min read</span>
+              <i class="fa fa-clock-o"></i>&nbsp;&nbsp;<span>1006 words</span> · <span class="reading-time">6 min read</span>
             </div>
             <div class="dot-line"></div>
           
           <div class="post-content">
             <p><em>全局作用域中的this永远为global对象，在浏览器环境下即为window对象。</em></p>
 <p>函数中的this根据函数的不同调用方式分下列4中情况：</p>
-<h2 id="1-直接调用function-invocation-pattern"><a class="markdownIt-Anchor" href="#1-直接调用function-invocation-pattern"></a> 1、直接调用（Function Invocation Pattern）</h2>
-<p>例如：</p>
+<h2 id="1、直接调用（Function-Invocation-Pattern）"><a href="#1、直接调用（Function-Invocation-Pattern）" class="headerlink" title="1、直接调用（Function Invocation Pattern）"></a>1、直接调用（Function Invocation Pattern）</h2><p>例如：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span>
 <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 输出：window</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>注意，此时的 <code>foo</code> 是作为单独的变量出现的，而不是对象的属性。</p>
 <p>在这种模式下，函数中的this永远是global对象，在浏览器环境下即window对象。</p>
-<h2 id="2-作为方法调用method-invocation-pattern"><a class="markdownIt-Anchor" href="#2-作为方法调用method-invocation-pattern"></a> 2、作为方法调用（Method Invocation Pattern）</h2>
-<p>示例：</p>
+<h2 id="2、作为方法调用（Method-Invocation-Pattern）"><a href="#2、作为方法调用（Method-Invocation-Pattern）" class="headerlink" title="2、作为方法调用（Method Invocation Pattern）"></a>2、作为方法调用（Method Invocation Pattern）</h2><p>示例：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
   <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'papi'</span><span class="token punctuation">,</span>
   <span class="token function-variable function">say</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -132,7 +131,8 @@
 <span class="token punctuation">&#125;</span>
 
 obj<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 输出：obj</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这种情况下函数作为对象的属性被调用，就必然会运用到 <code>.</code> 操作符或者 <code>[]</code>操作符，这种情况下，函数中的 <code>this</code> 等于 <code>.</code> 或 <code>[</code> 前面的那个对象，上面的例子中即为obj。 <code>obj['say']()</code> 这种调用方式输出的 <code>this</code> 也是 obj。</p>
+
+<p>这种情况下函数作为对象的属性被调用，就必然会运用到 <code>.</code> 操作符或者 <code>[]</code>操作符，这种情况下，函数中的 <code>this</code> 等于 <code>.</code> 或 <code>[</code> 前面的那个对象，上面的例子中即为obj。 <code>obj[&#39;say&#39;]()</code> 这种调用方式输出的 <code>this</code> 也是 obj。</p>
 <p>看下面一个例子：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> length <span class="token operator">=</span> <span class="token number">100</span>
     
@@ -148,6 +148,7 @@ obj<span class="token punctuation">.</span><span class="token function">say</spa
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 o<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>执行 <code>o.add</code> 方法并把全局变量 <code>func</code> 作为参数传入。</p>
 <p>在 <code>add</code> 方法内部执行传进来的 <code>func</code> 函数，这种调用属于函数直接调用，是上述第1种情况，因此函数中的 <code>this</code> 指向 <code>window</code>，<code>window.length</code>即全局变量 <code>length</code>，值为100。</p>
 <p><code>arguments[0]()</code> 这一条语句是取到了函数的第一个参数（显然是 <code>func</code> 函数）并执行，这种调用方式等效于 <code>func()</code> 这种调用方式？答案是否定的！众所周知，函数中的 <code>arguments</code> 是一个类数组对象，它具有 <code>length</code> 属性，其值为参数的个数，上例中只传入了一个参数，因此 <code>arguments.length === 1</code>，深入 <code>arguments</code> 对象，展开大体是以下结构：</p>
@@ -155,10 +156,10 @@ o<span class="token punctuation">.</span><span class="token function">add</span>
   <span class="token number">0</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token function">func</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
   <span class="token string-property property">'length'</span><span class="token operator">:</span> <span class="token number">1</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>因此，<code>arguments[0]()</code> 这种调用方式其实是调用了arguments对象的 <code>0</code> 方法！而这个所谓的 <code>0</code> 方法从何而来呢？就是通过将 <code>func</code> 函数复制给它得来的。因此，方法中的 <code>this</code> 应该指向 <code>arguments</code> 对象，因此输出 1。</p>
-<p>如果执行 <code>o.add(func, 'hahaha')</code> 呢？没错，输出2，因为此时 <code>arguments.length === 2</code>。</p>
-<h2 id="3-作为构造函数调用constructor-pattern"><a class="markdownIt-Anchor" href="#3-作为构造函数调用constructor-pattern"></a> 3、作为构造函数调用（Constructor Pattern）</h2>
-<p>在 <code>new Foo()</code> 这种调用方式下，<code>Foo</code> 内部的 <code>this</code> 永远指向 <code>new</code> 操作符返回的对象</p>
+<p>如果执行 <code>o.add(func, &#39;hahaha&#39;)</code> 呢？没错，输出2，因为此时 <code>arguments.length === 2</code>。</p>
+<h2 id="3、作为构造函数调用（Constructor-Pattern）"><a href="#3、作为构造函数调用（Constructor-Pattern）" class="headerlink" title="3、作为构造函数调用（Constructor Pattern）"></a>3、作为构造函数调用（Constructor Pattern）</h2><p>在 <code>new Foo()</code> 这种调用方式下，<code>Foo</code> 内部的 <code>this</code> 永远指向 <code>new</code> 操作符返回的对象</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Book</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
   
@@ -166,8 +167,8 @@ o<span class="token punctuation">.</span><span class="token function">add</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token string">'百年孤独'</span><span class="token punctuation">)</span> <span class="token comment">// 输出 &#123;name: '百年孤独'&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="4-apply调用apply-pattern"><a class="markdownIt-Anchor" href="#4-apply调用apply-pattern"></a> 4、apply调用（Apply Pattern）</h2>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+<h2 id="4、apply调用（Apply-Pattern）"><a href="#4、apply调用（Apply-Pattern）" class="headerlink" title="4、apply调用（Apply Pattern）"></a>4、apply调用（Apply Pattern）</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span>
 
@@ -181,9 +182,9 @@ o<span class="token punctuation">.</span><span class="token function">add</span>
 <span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          <span class="token comment">// 输出 window</span>
 <span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>      <span class="token comment">// 输出 window</span>
 <span class="token function">speak</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token comment">// 输出 window</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>函数的 <code>call</code>、 <code>apply</code> 、 <code>bind</code> 方法的第一个参数就是指定函数中 <code>this</code> 值的，如果不传参或传入 <code>null</code> 或 <code>undefined</code> 则将函数中的 <code>this</code> 指向global，在浏览器环境下即为 window对象。</p>
-<h2 id="5-es6箭头函数中的this"><a class="markdownIt-Anchor" href="#5-es6箭头函数中的this"></a> 5、ES6箭头函数中的this</h2>
-<p>ES6的箭头函数中的 <code>this</code> 与ES5中的 <code>this</code> 行为不一样，箭头函数中的 <code>this</code> 值是在函数定义时就决定的，它不会随着运行时的上下文不同发生改变。</p>
+<h2 id="5、ES6箭头函数中的this"><a href="#5、ES6箭头函数中的this" class="headerlink" title="5、ES6箭头函数中的this"></a>5、ES6箭头函数中的this</h2><p>ES6的箭头函数中的 <code>this</code> 与ES5中的 <code>this</code> 行为不一样，箭头函数中的 <code>this</code> 值是在函数定义时就决定的，它不会随着运行时的上下文不同发生改变。</p>
 <p>例如：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">printThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">let</span> <span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -205,11 +206,11 @@ o<span class="token punctuation">.</span><span class="token function">add</span>
 
 <span class="token function">printThis</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// [1]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>上例中， <code>printThis.call([1])</code> 调用 <code>printThis</code> 函数时将其内部的 <code>this</code> 值设为 <code>[1]</code>。</p>
 <p>在 <code>printThis</code> 函数内部定义了一个箭头函数 <code>print</code>，箭头函数中的 <code>this</code>，就是其外层函数 <code>printThis</code> 的 <code>this</code>，也就是 <code>[1]</code>。</p>
 <p>随后， <code>print()</code> 语句执行刚刚定义的函数，因此输出 <code>[1]</code>。</p>
-<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
-<p>弄清楚以上5种JS函数的调用方式，函数中 <code>this</code> 的指向就很清楚了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>弄清楚以上5种JS函数的调用方式，函数中 <code>this</code> 的指向就很清楚了。</p>
 <p><strong>–END–</strong></p>
 
           </div>
