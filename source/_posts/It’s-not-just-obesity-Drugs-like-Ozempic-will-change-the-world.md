@@ -8,9 +8,7 @@ tags:
 >
 > As they become cheaper, they promise to improve billions of lives
 >
->The everything drugs 
-
-![cover_image](https://www.economist.com/cdn-cgi/image/width=1280,quality=80,format=auto/content-assets/images/20241026_LDD001_FH.jpg)
+> The everything drugs
 
 Every day seems to bring more exciting news. First the drugs tackled ==diabetes==. Then, with just an injection a week, they took on ==obesity==. Now they are being found to treat ==cardiovascular== and ==kidney== disease, and are being tested for Alzheimer’s and addiction. It is early days yet, but GLP-1 receptor agonists have all the makings of one of the most successful classes of drugs in history. As they become cheaper and easier to use, they promise to dramatically improve the lives of more than a billion people—with profound consequences for industry, the economy and society.
 
