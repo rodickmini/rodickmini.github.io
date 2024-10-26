@@ -23,7 +23,12 @@
             <div class="dot-line"></div>
             <div class="highlighted-words">
               <h2>Highlighted Words</h2>
-              <p><%= highlightedWords %></p>
+              <i>Unfamiliar Word Rate: <%= Math.floor(highlightedWords.length / countWords(page.content) * 100) %>%</i>
+              <ol>
+                <% for (let i = 0; i < highlightedWords.length; i++) { %>
+                  <li><%= highlightedWords[i] %></li>
+                <% } %>
+              </ol>
             </div>
           <% } %>
           

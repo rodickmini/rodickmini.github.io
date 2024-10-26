@@ -40,9 +40,7 @@ hexo.extend.helper.register('extractHighlighted', function(content) {
   const matches = content.match(/<mark>(.*?)<\/mark>/g);
   if (!matches) return null;
 
-  // Extract the text from each <mark> tag
   const highlightedWords = matches.map(match => match.replace(/<\/?mark>/g, ''));
   
-  // Join the highlighted words with a comma and space
-  return highlightedWords.join(', ');
+  return [...new Set(highlightedWords)];
 });
