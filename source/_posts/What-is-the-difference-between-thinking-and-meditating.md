@@ -4,7 +4,7 @@ date: 2024-11-02 21:43:46
 tags: Meditation
 ---
 
-> Original from: <https://www.headspace.com/articles/difference-between-thinking-meditating?origin=meditation-cat>
+> Reposted from: <https://www.headspace.com/articles/difference-between-thinking-meditating?origin=meditation-cat>
 
 It always surprises me how often meditating and thinking are used ==interchangeably==, when in fact they describe two remarkably different things. There are many different ways to approach this question, but the one I have always found to ==resonate== most is the Japanese Zen approach of ‘Big Mind, Small Mind’.
 
