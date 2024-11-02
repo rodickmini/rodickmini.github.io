@@ -1,0 +1,17 @@
+---
+title: What is the difference between thinking and meditating?
+date: 2024-11-02 21:43:46
+tags: Meditation
+---
+
+> Original from: <https://www.headspace.com/articles/difference-between-thinking-meditating?origin=meditation-cat>
+
+It always surprises me how often meditating and thinking are used ==interchangeably==, when in fact they describe two remarkably different things. There are many different ways to approach this question, but the one I have always found to ==resonate== most is the Japanese Zen approach of ‘Big Mind, Small Mind’.
+
+Small Mind describes the thinking mind — our intellectual mind, the aspect of mind that we are perhaps most familiar. It is the aspect of mind that we use throughout the day to live our life, thinking through situations, decisions, projects; it is essential, necessary, and often very helpful. Equally, as you might have noticed, it also has the potential to be ==problematic==: busy, distracting, exhausting, and even overwhelming.
+
+Big Mind, on the other hand, refers to the quality of awareness — the aspect of mind that allows us to be aware of thoughts as they arise. You may have noticed while meditating that we have the ability to see thoughts not only as we replay them, but also in the moment itself, as they arise. This is awareness — this is Big Mind — and it tends to feel quite ==spacious==, leaving us feeling more at ease.
+
+By nature, this aspect of awareness is free from opinion, belief, or judgment; it simply witnesses the mind as it is in the moment, whether there are many thoughts, few thoughts, or no thoughts at all. And because it is witnessing rather than being involved, it gives us the impression of having stepped back and zoomed out, shifting our ==perception== of the mind. So back to the main point: when meditating, we are not engaged in thinking. That does not mean the mind will be empty — thoughts will still appear — but we are not looking to engage with these thoughts. We are training the mind to no longer chase every thought we like, and to no longer ==resist== every thought we don’t like. Instead, we are learning to ==familiarize== ourselves with the quality of awareness. Of course, even during meditation, the mind will sometimes wander and get distracted, but as long as we are sat with the intention to simply witness the mind as it is — recognizing when the mind has drifted, letting go of that thinking, and then resting our attention back on the original point of focus — then we can rightly call that meditation, not thinking.
+
+Perhaps the easiest way to answer this question is through direct experience. How does it feel after a long day engaged in Small Mind, engaged in thinking? Or how does it feel to wake in the morning, when the thinking mind has been very active throughout the night? In contrast, how does it feel when you open your eyes after a meditation? Or how does it feel when you let go of thought and get lost in nature? The feeling between thinking and meditating is not even comparable. Just to ==reiterate==, and to be absolutely clear, it’s not that thinking is bad, or that Small Mind is any less valuable. It’s simply that when the mind is untrained, we tend to get lost in Small Mind and forget that Big Mind is here, with us all the time. And so we often become lost in thought, confused, distracted, or overwhelmed. But by practicing meditation — training in Big Mind — we reconnect with that quality of awareness, that feeling of space and clarity, and a renewed sense of perspective that fundamentally changes our experience of life.
