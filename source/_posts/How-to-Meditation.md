@@ -1,7 +1,7 @@
 ---
 title: How to Meditation
 date: 2024-10-25 14:35:59
-tags: [self improvement]
+tags: [self improvement, Meditation]
 ---
 
 > I listend a podcast about *How to Thrive at Work* this morning, it mentioned that meditation is a good way to adjust your moods at work. I'm trying to conclude the methods and every detail about it.
