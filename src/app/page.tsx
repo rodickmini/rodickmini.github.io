@@ -165,6 +165,19 @@ function MailIcon() {
   );
 }
 
+function DownloadIcon() {
+  return (
+    <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-300">
@@ -231,6 +244,10 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a className="primary-button" href={`mailto:${contact.email}`}>
                 Contact me
+              </a>
+              <a className="secondary-button" download href="/resume.pdf">
+                <DownloadIcon />
+                <span className="ml-2">Download Resume</span>
               </a>
               <a className="secondary-button" href={contact.linkedin}>
                 <LinkedInIcon />
@@ -359,6 +376,10 @@ export default function Home() {
             <div className="mt-7 flex flex-wrap gap-3">
               <a className="primary-button" href={`mailto:${contact.email}`}>
                 {contact.email}
+              </a>
+              <a className="secondary-button" download href="/resume.pdf">
+                <DownloadIcon />
+                <span className="ml-2">Download Resume</span>
               </a>
               <a className="secondary-button" href={contact.linkedin}>
                 <LinkedInIcon />

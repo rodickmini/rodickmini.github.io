@@ -45,3 +45,7 @@ next-env.d.ts
 AGENTS.md
 CLAUDE.md
 *.docx
+!MyResume/output/*.docx
+MyResume/.DS_Store
+MyResume/pdf-render/
+MyResume/resume-render/

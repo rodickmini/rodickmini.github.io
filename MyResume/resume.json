@@ -1,0 +1,87 @@
+{
+  "name": "Cai You (David)",
+  "headline": "AI Product Manager | Enterprise AI | Knowledge Management | Generative AI | Former Software Engineer",
+  "location": "Nanjing, Jiangsu, China",
+  "email": "davidcaiyou@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/caiyou",
+  "github": "https://github.com/rodickmini",
+  "summary": [
+    "Technical Product Manager with 12+ years of experience across software engineering, product management, and AI-powered enterprise solutions.",
+    "My career started as a software engineer, which gives me a strong technical foundation for working closely with engineering and AI teams. Over the years, I have led the development of large-scale consumer products, enterprise platforms, and AI-powered knowledge management systems.",
+    "Currently, I lead enterprise AI initiatives at NARI Group, focusing on LLM-powered knowledge management platforms and internal collaboration products serving tens of thousands of users.",
+    "Previously, I led product development at Meipian, where I helped scale content publishing products and launched a WeChat Mini Program that reached 2M DAUs and generated ¥40M in revenue.",
+    "I am passionate about building Enterprise AI products, knowledge management platforms, and LLM-powered applications that help organizations unlock and scale their collective knowledge.",
+    "Open to Product Management and AI Product roles worldwide. Willing to relocate and work with visa sponsorship opportunities."
+  ],
+  "skills": [
+    "Stakeholder Management",
+    "Cross-functional Leadership",
+    "Team Leadership",
+    "Enterprise AI",
+    "Knowledge Management",
+    "Generative AI",
+    "LLM-powered Applications",
+    "Product Strategy",
+    "Roadmap Execution",
+    "Former Software Engineer"
+  ],
+  "experience": [
+    {
+      "company": "NARI Group Corporation",
+      "role": "AI Product Manager",
+      "location": "Nanjing",
+      "period": "Jun 2022 - Present",
+      "bullets": [
+        "Led the design and delivery of an LLM-powered enterprise knowledge platform serving 30,000+ users, reducing information retrieval time by 40%.",
+        "Managed a cross-functional AI product team of 12 engineers, data scientists, and product managers, driving product strategy and roadmap execution.",
+        "Designed and launched an enterprise communication platform that reached 30,000+ registered users, 15,000 DAUs, and 100,000+ daily messages within six months."
+      ]
+    },
+    {
+      "company": "Meipian",
+      "role": "Senior Product Manager",
+      "location": "Nanjing",
+      "period": "Jun 2019 - Apr 2022",
+      "bullets": [
+        "Led a 10-member cross-functional team to evolve Meipian's core content publishing platform, supporting 150,000 daily posts and 30M page views.",
+        "Spearheaded the development of Meipian's WeChat Mini Program from concept to launch, scaling to 2M DAUs and generating ¥40M revenue through product optimization and monetization initiatives."
+      ]
+    },
+    {
+      "company": "Meipian",
+      "role": "Frontend Development Lead",
+      "location": "Nanjing",
+      "period": "Jun 2017 - Jun 2019",
+      "bullets": [
+        "Led the modernization of Meipian's front-end architecture by introducing Vue.js-based development practices, improving development efficiency by approximately 80%.",
+        "Collaborated closely with product, design, and backend teams to deliver large-scale content creation and publishing features used by millions of users.",
+        "Reduced deployment defects and improved release quality through front-end engineering standards and workflow optimization.",
+        "Presented a technical session on progressive front-end architecture at Google DevFest Nanjing 2017."
+      ]
+    },
+    {
+      "company": "HeqiAuto",
+      "role": "Co-Founder & Front-End Lead",
+      "location": "Beijing, China",
+      "period": "Mar 2014 - May 2017",
+      "bullets": [
+        "Co-founded an automotive technology startup focused on digital solutions for the automotive industry.",
+        "Led front-end architecture design and development, building web-based products and internal management systems from the ground up.",
+        "Worked closely with customers and business stakeholders to translate requirements into product features, gaining early experience in product strategy and user-centric design.",
+        "Managed the full product development lifecycle, including requirements analysis, solution design, development, deployment, and customer support."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Beijing University of Posts and Telecommunications",
+      "degree": "Master's Degree, Computer Science and Technology",
+      "period": "Sep 2011 - Mar 2014"
+    },
+    {
+      "school": "Beijing University of Posts and Telecommunications",
+      "degree": "Bachelor's Degree, Computer Science and Technology",
+      "period": "Sep 2007 - Jun 2011"
+    }
+  ]
+}

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "resume:install": "python3 -m pip install -r MyResume/requirements.txt",
+    "resume:build": "python3 MyResume/build_resume_assets.py"
   },
   "dependencies": {
     "next": "16.2.6",
