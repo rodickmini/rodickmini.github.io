@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const contact = {
   email: "davidcaiyou@gmail.com",
   github: "https://github.com/rodickmini",
@@ -184,9 +186,13 @@ export default function Home() {
       <aside className="border-b border-white/10 bg-slate-950/95 px-5 py-5 backdrop-blur md:fixed md:inset-y-0 md:left-0 md:z-20 md:flex md:w-[280px] md:flex-col md:justify-between md:border-b-0 md:border-r md:px-7 md:py-8">
         <div>
           <a href="#intro" className="group mb-6 flex items-center gap-4 md:block">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-cyan-300/40 bg-cyan-300/10 text-xl font-bold text-cyan-100 shadow-[0_0_36px_rgba(34,211,238,0.18)]">
-              CY
-            </div>
+            <Image
+              alt="Cai You (David)"
+              className="h-16 w-16 shrink-0 rounded-full object-cover shadow-[0_0_0_1px_rgba(148,163,184,0.16),0_18px_44px_rgba(2,6,23,0.55)]"
+              height={64}
+              src="/avatar.jpg"
+              width={64}
+            />
             <div className="md:mt-4">
               <p className="text-lg font-bold text-slate-100">Cai You (David)</p>
               <p className="mt-1 text-sm leading-6 text-slate-400">
